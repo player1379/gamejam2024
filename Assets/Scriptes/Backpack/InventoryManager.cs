@@ -40,6 +40,7 @@ public class InventoryManager : MonoBehaviour
 
     //配方面板
     public GameObject formula;
+    private FormulaImg formulaImg;
 
     private Canvas canvas;
 
@@ -74,6 +75,7 @@ public class InventoryManager : MonoBehaviour
     {
         toolTip = GameObject.FindObjectOfType<ToolTip>();
         //formula = GameObject.Find("Formula").gameObject;
+        //formulaImg = GameObject.FindObjectOfType<FormulaImg>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         pickedItem = GameObject.Find("PickedItem").GetComponent<ItemUI>();
         pickedItem.Hide();
@@ -172,12 +174,16 @@ public class InventoryManager : MonoBehaviour
     public int[] alchemyInt;
 
 
-
-
     public void ShowFormula(Formulaes formulaes)
     {
         formula.gameObject.SetActive(true);
+        formulaImg = GameObject.FindObjectOfType<FormulaImg>();
         formulaesStr = formulaes.Formula;
+    }
+
+    public void UpdataFormula()
+    {
+        formulaImg.UpdateAlchemy();
     }
 
     public void HideFormula()

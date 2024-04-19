@@ -32,7 +32,9 @@ public class AlchemySlot : Slot
                     DestroyImmediate(currentItemUI.gameObject);
                     InventoryManager.Instance.HideToolTip();
                 }
-                Chest.Instance.StoreItem(currentItem);              
+                Chest.Instance.StoreItem(currentItem);
+                InventoryManager.Instance.alchemyInt = Alchemy.Instance.CalculateElement();
+                InventoryManager.Instance.UpdataFormula();
             }
         }
     }

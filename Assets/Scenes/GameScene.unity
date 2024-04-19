@@ -6269,6 +6269,7 @@ MonoBehaviour:
   prefabWithImage: {fileID: 8279168319944549320, guid: d4e75a09b4bdce546ae9a11662aa78d9, type: 3}
   ElementInt: 
   ElementFormul: 
+  elementsGameObjects: []
 --- !u!1001 &1008367740
 PrefabInstance:
   m_ObjectHideFlags: 0

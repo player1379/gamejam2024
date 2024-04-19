@@ -57,7 +57,8 @@ public class Alchemy : Inventory
     public int[] CalculateElement()
     {
         string element = "";
-        foreach(Slot slot in slotList) 
+        elementCount = elementCount = new int[] { 0, 0, 0, 0, 0 };
+        foreach (Slot slot in slotList) 
         {
             if (slot.transform.childCount > 0)
             {

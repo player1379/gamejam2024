@@ -92,6 +92,7 @@ public class Slot : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,IPoi
                         }
                         Alchemy.Instance.PutInMaterial(currentItem);
                         InventoryManager.Instance.alchemyInt = Alchemy.Instance.CalculateElement();
+                        InventoryManager.Instance.UpdataFormula();
                     }
                 }
             }

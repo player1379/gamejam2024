@@ -12,20 +12,19 @@ using UnityEngine.UI;
 public class FormulaImg : MonoBehaviour
 {
     public GameObject[] Elements;
-
     public Sprite[] elements;
 
     public GameObject prefabWithImage;
     //合成台里的元素
-    public int[] ElementInt;
+    public int[] ElementInt = new int[] { 0, 0, 0, 0, 0 };
 
     //配方需要的元素
     public int[] ElementFormul;
-
+    //配方里需要的元素所创建的所有预制件
+    public List<GameObject> elementsGameObjects;
 
     private void Start()
     {
-        ElementInt = new int[] { 0, 0, 0, 0, 0 };
         UpdateFormulaImg();
     }
 
@@ -33,7 +32,7 @@ public class FormulaImg : MonoBehaviour
     {
         //Debug.Log(ElementInt[0]+","+ElementInt[1] + "," + ElementInt[2] + "," + ElementInt[3] + "," + ElementInt[4]);
         //UpdateFormulaImg();
-        UpdateAlchemy();
+        //UpdateAlchemy();
     }
 
     //更新配方中的元素
@@ -47,6 +46,7 @@ public class FormulaImg : MonoBehaviour
             for (int j = 0; j < ElementFormul[i]; j++)
             {
                 GameObject childObject = Instantiate(prefabWithImage);
+                elementsGameObjects.Add(childObject);
                 childObject.transform.SetParent(Elements[i].transform);
             }
         }       
@@ -54,9 +54,8 @@ public class FormulaImg : MonoBehaviour
 
     //放入材料后更新显示
     public void UpdateAlchemy()
-    {
-        GameObject[] foundPrefabs = FindPrefabsInHierarchy(transform, prefabWithImage);
-        foreach (var item in foundPrefabs)
+    {       
+        foreach (var item in elementsGameObjects)
         {
             item.GetComponent<Image>().color = Color.black;
         }
@@ -76,8 +75,17 @@ public class FormulaImg : MonoBehaviour
                 {
                     Elements[i].transform.GetChild(j).GetComponent<Image>().color = Color.white;
                 }
+            }           
+        }
+        foreach (var item in elementsGameObjects)
+        {
+            if (item.GetComponent<Image>().color != Color.white)
+            {
+                Debug.Log("不能合成");
+                return;
             }
         }
+        Debug.Log("可以合成");
     }
 
     //字符串->数组
@@ -97,27 +105,5 @@ public class FormulaImg : MonoBehaviour
         }
         return result;
     }
-
-    public GameObject[] FindPrefabsInHierarchy(Transform parent, GameObject prefab)
-    {
-        // 用来存储找到的预制件的列表
-        var foundPrefabs = new List<GameObject>();
-
-        // 遍历所有子物体
-        foreach (Transform child in parent)
-        {
-            // 检查子物体是否是预制件
-            if (child.gameObject == prefab)
-            {
-                foundPrefabs.Add(child.gameObject);
-            }
-
-            // 递归搜索子物体的子物体
-            foundPrefabs.AddRange(FindPrefabsInHierarchy(child, prefab));
-        }
-        return foundPrefabs.ToArray();
-    }
-
-
 }
 
