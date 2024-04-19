@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "矿石",
+    "type": "Material",
+    "description": "一块普通的矿石",
+    "capacity": 99,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "element": "12345",
+    "sideEffect": "副作用1",
+    "sprite": "Sprites/Material/001"
+  },
+  {
+    "id": 2,
+    "name": "恢复药水配方",
+    "type": "Formula",
+    "description": "可以恢复HP的药水",
+    "capacity": 1,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "formula": "11451",
+    "sprite": "Sprites/Formula/001"
+  }
+]
