@@ -4,51 +4,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
-    #region basic property
-    private int basicStrength = 10;
-    private int basicIntellect = 10;
-    private int basicAgility = 10;
-    private int basicStamina = 10;
-    private int basicDamage = 10;
-
-    public int BasicStrength
-    {
-        get
-        {
-            return basicStrength;
-        }
-    }
-    public int BasicIntellect
-    {
-        get
-        {
-            return basicIntellect;
-        }
-    }
-    public int BasicAgility
-    {
-        get
-        {
-            return basicAgility;
-        }
-    }
-    public int BasicStamina
-    {
-        get
-        {
-            return basicStamina;
-        }
-    }
-    public int BasicDamage
-    {
-        get
-        {
-            return basicDamage;
-        }
-    }
-    #endregion
-
     private int coinAmount = 100;
 
     private Text coinText;
@@ -66,13 +21,18 @@ public class Player : MonoBehaviour
         }
     }
 
+
+    public GameObject bubbleObj;
+    public Button bubbleBtn;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-	void Update () {
+
+	void Update () 
+    {
         //G 随机得到一个物品放到背包里面
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -90,7 +50,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             Chest.Instance.DisplaySwitch();
-        } 
+        }
 	}
 
     /// <summary>

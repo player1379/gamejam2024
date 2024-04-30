@@ -55,7 +55,7 @@ public class Item
     public virtual string GetToolTipText()
     {
         string color = "";       
-        string text = string.Format("<color={4}>{0}</color>\n<size=10><color=blue>购买价格：{1} \n出售价格：{2}</color></size>\n<color=yellow><size=10>{3}</size></color>", Name, BuyPrice, SellPrice, Description, color);
+        string text = string.Format("<color={4}>{0}</color>\n\n<size=10><color=blue>购买价格：{1} \n出售价格：{2}</color></size>\n<color=yellow><size=10>{3}</size></color>\n", Name, BuyPrice, SellPrice, Description, color);
         return text;
     }
 }

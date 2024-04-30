@@ -35,6 +35,8 @@ public class FormulaImg : MonoBehaviour
         //UpdateAlchemy();
     }
 
+
+
     //更新配方中的元素
     public void UpdateFormulaImg()
     {    
@@ -49,8 +51,10 @@ public class FormulaImg : MonoBehaviour
                 elementsGameObjects.Add(childObject);
                 childObject.transform.SetParent(Elements[i].transform);
             }
-        }       
+        }
     }
+
+
 
     //放入材料后更新显示
     public void UpdateAlchemy()
@@ -87,6 +91,8 @@ public class FormulaImg : MonoBehaviour
         }
         Debug.Log("可以合成");
     }
+
+
 
     //字符串->数组
     public static int[] ConvertToNumberArray(string str)

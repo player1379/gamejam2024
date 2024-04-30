@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ToolTip : MonoBehaviour {
+public class ToolTip : MonoBehaviour 
+{
 
     private Text toolTipText;
     private Text contentText;

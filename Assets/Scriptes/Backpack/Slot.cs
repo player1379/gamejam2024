@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 /// <summary>
 /// 物品槽
 /// </summary>
-public class Slot : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,IPointerDownHandler{
+public class Slot : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,IPointerDownHandler
+{
 
     public GameObject itemPrefab;
     /// <summary>
