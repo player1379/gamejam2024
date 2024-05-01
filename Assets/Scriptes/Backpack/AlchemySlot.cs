@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
+
 /// <summary>
 /// 炼金台格子
 /// <summary>
@@ -11,7 +12,7 @@ public class AlchemySlot : Slot
 {
     public override void StoreItem(Item item)
     {
-        GameObject itemGameObject = Instantiate(itemPrefab) as GameObject;
+        GameObject itemGameObject = Instantiate(itemPrefab);
         itemGameObject.transform.SetParent(this.transform);
         itemGameObject.transform.localScale = Vector3.one;
         itemGameObject.transform.localPosition = Vector3.zero;

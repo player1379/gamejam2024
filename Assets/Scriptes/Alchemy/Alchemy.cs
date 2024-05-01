@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// 炼金台
@@ -22,6 +22,8 @@ public class Alchemy : Inventory
         }
     }
     #endregion
+
+    public Button alchemyBtn;
 
     //数组对应数量  金 木 水 火 土
     public int[] elementCount;
@@ -89,6 +91,12 @@ public class Alchemy : Inventory
             }
         }
         return count;
+    }
+
+    //显示可以合成按钮
+    public void ShowAlchemyBtn()
+    {
+        alchemyBtn.gameObject.SetActive(true);
     }
 
 }

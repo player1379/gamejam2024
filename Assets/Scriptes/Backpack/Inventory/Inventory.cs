@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
 
     protected Slot[] slotList;
 
-    private float targetAlpha = 1;
+    private float targetAlpha = 0;
 
     private float smoothing = 4;
 

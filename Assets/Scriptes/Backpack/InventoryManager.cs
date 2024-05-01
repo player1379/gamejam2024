@@ -124,7 +124,8 @@ public class InventoryManager : MonoBehaviour
             switch (itemType)
             {             
                 case ItemType.Material:
-                    string typeElement = temp["element"].StringValue;                   
+                case ItemType.Plant:
+                    string typeElement = temp["element"].StringValue;
                     string element = temp["element"].StringValue;
                     string sideEffect = temp["sideEffect"].StringValue;
                     item = new Material(id,name, ItemType.Material,description,capacity,buyPrice,sellPrice,sprite,element,sideEffect);
@@ -140,23 +141,27 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+
+
     public Item GetItemById(int id)
     {
         foreach (Item item in itemList)
         {
             if (item.ID == id)
             {
-                return item;
+                return item;               
             }
         }
         return null;
     }
 
-    public void ShowToolTip(string content)
+    public void ShowToolTip(string content,string element="",string effect = "")
     {
         if (this.isPickedItem) return;
         isToolTipShow = true;
         toolTip.Show(content);
+        toolTip.ShowElement(element);
+        toolTip.ShowEffect(effect);
     }
 
     public void HideToolTip()
@@ -183,7 +188,10 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdataFormula()
     {
-        formulaImg.UpdateAlchemy();
+        if (formulaImg != null)
+        {
+            formulaImg.UpdateAlchemy();
+        }       
     }
 
     public void HideFormula()

@@ -89,7 +89,7 @@ public class FormulaImg : MonoBehaviour
                 return;
             }
         }
-        Debug.Log("可以合成");
+        Alchemy.Instance.ShowAlchemyBtn();
     }
 
 

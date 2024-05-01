@@ -16,5 +16,8 @@ public class Material : Item
         SideEffect = sideEffect;
     }
 
-
+    public string[] GetToolTipSprie()
+    {
+        return new string[] { Element, SideEffect };
+    }
 }

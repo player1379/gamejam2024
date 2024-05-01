@@ -23,11 +23,13 @@ public class Player : MonoBehaviour
 
 
     public GameObject bubbleObj;
-    public Button bubbleBtn;
+    public Button ChestBtn;
+    public Button AlchemyBtn;
 
     void Start()
     {
-        
+        ChestBtn.onClick.AddListener(Chest.Instance.DisplaySwitch);
+        AlchemyBtn.onClick.AddListener(AlchemyDisplay);
     }
 
 
@@ -37,13 +39,15 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G))
         {
             //int id = Random.Range(1, 18);
-            Chest.Instance.StoreItem(1);
+            Chest.Instance.StoreItem(1001);
+            Chest.Instance.StoreItem(2001);
+            Chest.Instance.StoreItem(2002);
         }
 
         if (Input.GetKeyDown(KeyCode.H))
         {
             //int id = Random.Range(1, 18);
-            FormulaPanel.Instance.StoreItem(2);
+            FormulaPanel.Instance.StoreItem(3001);
         }
 
         //T 控制背包的显示和隐藏
@@ -52,6 +56,15 @@ public class Player : MonoBehaviour
             Chest.Instance.DisplaySwitch();
         }
 	}
+
+    void AlchemyDisplay()
+    {
+        Chest.Instance.DisplaySwitch();
+        Alchemy.Instance.DisplaySwitch();
+        FormulaPanel.Instance.DisplaySwitch();
+    }
+
+
 
     /// <summary>
     /// 消费

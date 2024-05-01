@@ -1,25 +1,49 @@
 [
   {
-    "id": 1,
+    "id": 1001,
     "name": "矿石",
     "type": "Material",
     "description": "一块普通的矿石",
-    "capacity": 99,
+    "capacity": 1,
     "buyPrice": 10,
     "sellPrice": 5,
-    "element": "12345",
+    "element": "1",
     "sideEffect": "副作用1",
     "sprite": "Sprites/Material/001"
   },
   {
-    "id": 2,
+    "id": 2001,
+    "name": "野草",
+    "type": "Plant",
+    "description": "路边不知名的野草",
+    "capacity": 1,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "element": "2",
+    "sideEffect": "副作用2",
+    "sprite": "Sprites/Plant/001"
+  },
+  {
+    "id": 2002,
+    "name": "野草",
+    "type": "Plant",
+    "description": "路边不知名的野草",
+    "capacity": 1,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "element": "22",
+    "sideEffect": "副作用2",
+    "sprite": "Sprites/Plant/001"
+  },
+  {
+    "id": 3001,
     "name": "恢复药水配方",
     "type": "Formula",
     "description": "可以恢复HP的药水",
     "capacity": 1,
     "buyPrice": 10,
     "sellPrice": 5,
-    "formula": "11451",
+    "formula": "11000",
     "sprite": "Sprites/Formula/001"
   }
 ]
