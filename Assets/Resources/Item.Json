@@ -44,6 +44,39 @@
     "buyPrice": 10,
     "sellPrice": 5,
     "formula": "11000",
+    "product": 4001,
     "sprite": "Sprites/Formula/001"
+  },
+  {
+    "id": 3002,
+    "name": "消毒药水配方",
+    "type": "Formula",
+    "description": "可以解毒的药水",
+    "capacity": 1,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "formula": "22000",
+    "product": 4002,
+    "sprite": "Sprites/Formula/001"
+  },
+  {
+    "id": 4001,
+    "name": "恢复药水",
+    "type": "Medicament",
+    "description": "可以恢复HP的药水",
+    "capacity": 1,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "sprite": "Sprites/Medicament/001"
+  },
+  {
+    "id": 4002,
+    "name": "解毒药水",
+    "type": "Medicament",
+    "description": "可以解毒的药水",
+    "capacity": 1,
+    "buyPrice": 10,
+    "sellPrice": 5,
+    "sprite": "Sprites/Medicament/001"
   }
 ]

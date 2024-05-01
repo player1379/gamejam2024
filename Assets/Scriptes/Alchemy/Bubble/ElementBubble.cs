@@ -58,7 +58,6 @@ public class ElementBubble : Bubble
         else if (gameObject == elementBubbles[3])//ÍÁÔªËØÆøÅİ
         {
             indexer--;
-            Debug.Log(indexer);
             if (indexer == 0)
             {
                 animator.SetBool("play", true);

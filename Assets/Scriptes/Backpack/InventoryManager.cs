@@ -42,6 +42,12 @@ public class InventoryManager : MonoBehaviour
     public GameObject formula;
     private FormulaImg formulaImg;
 
+    //所有按钮
+    public GameObject ButtonObj;
+
+    public GameObject BubblePanel;
+    public GameObject GrindPanel;
+
     private Canvas canvas;
 
     #region PickedItem
@@ -75,7 +81,6 @@ public class InventoryManager : MonoBehaviour
     {
         toolTip = GameObject.FindObjectOfType<ToolTip>();
         //formula = GameObject.Find("Formula").gameObject;
-        //formulaImg = GameObject.FindObjectOfType<FormulaImg>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         pickedItem = GameObject.Find("PickedItem").GetComponent<ItemUI>();
         pickedItem.Hide();
@@ -131,16 +136,18 @@ public class InventoryManager : MonoBehaviour
                     item = new Material(id,name, ItemType.Material,description,capacity,buyPrice,sellPrice,sprite,element,sideEffect);
                     break;
                 case ItemType.Medicament:
+                    string effect = "";
+                    item = new Medicament(id, name, ItemType.Medicament, description, capacity, buyPrice, sellPrice, sprite, effect);
                     break;
                 case ItemType.Formula:
                     string formula = temp["formula"].StringValue;
-                    item = new Formulaes(id, name, ItemType.Formula, description, formula, sprite);
+                    int product = temp["product"].IntValue;
+                    item = new Formulaes(id, name, ItemType.Formula, description, formula, sprite, product);
                     break;
             }
             itemList.Add(item);
         }
     }
-
 
 
     public Item GetItemById(int id)
@@ -174,16 +181,25 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector]
     public string formulaesStr;
 
+    [HideInInspector]
+    public int formulaesIndex;
+
     //合成台数据
     [HideInInspector]
     public int[] alchemyInt;
 
-
+    //配方图片显隐
     public void ShowFormula(Formulaes formulaes)
     {
         formula.gameObject.SetActive(true);
-        formulaImg = GameObject.FindObjectOfType<FormulaImg>();
+        formulaImg = FindObjectOfType<FormulaImg>();
         formulaesStr = formulaes.Formula;
+        formulaesIndex = formulaes.Product;
+    }
+
+    public void HideFormula()
+    {
+        formula.gameObject.SetActive(false);
     }
 
     public void UpdataFormula()
@@ -194,9 +210,36 @@ public class InventoryManager : MonoBehaviour
         }       
     }
 
-    public void HideFormula()
+    //控制所有按钮显隐
+    public void ShowAllButton()
     {
-        formula.gameObject.SetActive(false);
+        ButtonObj.gameObject.SetActive(true);
+    }
+
+    //控制玩法面板
+    public void HideAllButton()
+    {
+        ButtonObj.gameObject.SetActive(false);
+    }
+
+    public void ShowBubblePanel()
+    {
+        BubblePanel.gameObject.SetActive(true);
+    }
+
+    public void HideBubblePanel()
+    {
+        BubblePanel.gameObject.SetActive(false);
+    }
+
+    public void ShowGrindPanel()
+    {
+        GrindPanel.gameObject.SetActive(true);
+    }
+
+    public void HideGrindPanel() 
+    {
+        GrindPanel.gameObject.SetActive(false);
     }
 
     //捡起物品槽指定数量的物品

@@ -11,6 +11,7 @@ using UnityEngine.Pool;
 public class Bubble : MonoBehaviour
 {
     public ObjectPool<GameObject> pool;
+    public BubbleAmount amount;
 
     public Animator animator;
 
@@ -19,6 +20,7 @@ public class Bubble : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        amount = GetComponentInParent<BubbleAmount>();
         animator.SetBool("play", false);
     }
 
@@ -39,12 +41,20 @@ public class Bubble : MonoBehaviour
     private void DestroyGameObject()
     {
         pool.Release(gameObject);
+        amount.BubbleCount();
         //TODO ≤•∑≈“Ù–ß
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        pool.Release(gameObject);
+        if (gameObject.tag == "Bubble")
+        {
+            pool.Release(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
 

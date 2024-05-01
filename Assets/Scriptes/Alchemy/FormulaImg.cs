@@ -14,6 +14,8 @@ public class FormulaImg : MonoBehaviour
     public GameObject[] Elements;
     public Sprite[] elements;
 
+    public Button closeBtn;
+
     public GameObject prefabWithImage;
     //合成台里的元素
     public int[] ElementInt = new int[] { 0, 0, 0, 0, 0 };
@@ -27,15 +29,6 @@ public class FormulaImg : MonoBehaviour
     {
         UpdateFormulaImg();
     }
-
-    private void Update()
-    {
-        //Debug.Log(ElementInt[0]+","+ElementInt[1] + "," + ElementInt[2] + "," + ElementInt[3] + "," + ElementInt[4]);
-        //UpdateFormulaImg();
-        //UpdateAlchemy();
-    }
-
-
 
     //更新配方中的元素
     public void UpdateFormulaImg()
@@ -85,7 +78,7 @@ public class FormulaImg : MonoBehaviour
         {
             if (item.GetComponent<Image>().color != Color.white)
             {
-                Debug.Log("不能合成");
+                Alchemy.Instance.HideAlchemyBtn();
                 return;
             }
         }

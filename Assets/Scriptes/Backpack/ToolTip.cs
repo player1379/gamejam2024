@@ -80,5 +80,4 @@ public class ToolTip : MonoBehaviour
             effectTxt.text = effect;
         }
     }
-	
 }

@@ -17,9 +17,8 @@ public class Inventory : MonoBehaviour
 
 	public virtual void Start () {
         slotList = GetComponentsInChildren<Slot>();
-        canvasGroup = GetComponentInChildren<CanvasGroup>();
+        canvasGroup = GetComponentInChildren<CanvasGroup>();        
 	}
-
 
     void Update()
     {

@@ -17,4 +17,12 @@ public class Chest : Inventory
         }
     }
     #endregion
+
+    public override void Start()
+    {
+        base.Start();
+        Hide();
+    }
+
+
 }
