@@ -10,8 +10,6 @@ public class GrindManager : MonoBehaviour
 {
     public AudioSource myMusic;
 
-    public bool startPlaying;
-
     public BeatScroller BS;
 
     public static GrindManager instance;
@@ -21,17 +19,10 @@ public class GrindManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
+    public void GrindStart()
     {
-        if (!startPlaying)
-        {
-            if (Input.anyKeyDown)
-            {
-                startPlaying = true;
-                BS.hasStart = true;
-                myMusic.Play();
-            }
-        }
+        BS.hasStart = true;
+        myMusic.Play();
     }
 
     public void NoteHit()

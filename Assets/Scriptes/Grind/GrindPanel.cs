@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 /// <summary>
@@ -13,16 +14,33 @@ public class GrindPanel : MonoBehaviour
 
     public Transform triggerTrans;
 
+    public Button grindStartBtn;
+
+    public float Timer;
+    public float Times=20f;
+
+    private void Start()
+    {
+        Timer = 0;
+        Chest.Instance.Show();
+        Grind.Instance.Show();
+        grindStartBtn.onClick.AddListener(CreateGrind);
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        Timer += Time.deltaTime;
+        if (Timer > Times)
         {
-            CreateGrind();
+            InventoryManager.Instance.HideGrindPanel();
         }
     }
 
     public void CreateGrind()
     {
+        Chest.Instance.Hide();
+        Grind.Instance.Hide();
+        GrindManager.instance.GrindStart();
         GameObject sObj = Instantiate(sliderObj);
         sObj.transform.SetParent(triggerTrans);
         GameObject tObj = Instantiate(triggerObj);
