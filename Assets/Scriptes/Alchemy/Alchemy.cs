@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// 炼金台
@@ -22,6 +22,16 @@ public class Alchemy : Inventory
         }
     }
     #endregion
+
+    public override void Start()
+    {
+        base.Start();
+        Hide();
+
+        alchemyBtn.onClick.AddListener(OnAlchemyBtnDown);
+    }
+
+    public Button alchemyBtn;
 
     //数组对应数量  金 木 水 火 土
     public int[] elementCount;
@@ -78,7 +88,7 @@ public class Alchemy : Inventory
     }
 
     //计算有多少元素
-    public static int CountElement(string inputString, char character)
+    public int CountElement(string inputString, char character)
     {
         int count = 0;
         foreach (char c in inputString)
@@ -89,6 +99,37 @@ public class Alchemy : Inventory
             }
         }
         return count;
+    }
+
+    //输出一个词条
+    public string CalculateEffect()
+    {
+        foreach (Slot slot in slotList)
+        {
+
+        }
+            return "";
+    }
+
+    //显示可以合成按钮
+    public void ShowAlchemyBtn()
+    {
+        alchemyBtn.gameObject.SetActive(true);
+    }
+
+    public void HideAlchemyBtn()
+    {
+        alchemyBtn.gameObject.SetActive(false);
+    }
+
+    public void OnAlchemyBtnDown()
+    {
+        //显示气泡玩法界面  输出成品
+        Chest.Instance.Hide();
+        Alchemy.Instance.Hide();
+        FormulaPanel.Instance.Hide();
+        InventoryManager.Instance.ShowBubblePanel();
+        Chest.Instance.StoreItem(InventoryManager.Instance.formulaesIndex);
     }
 
 }

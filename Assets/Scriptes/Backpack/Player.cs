@@ -4,10 +4,9 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+
     private int coinAmount = 100;
-
     private Text coinText;
-
     public int CoinAmount
     {
         get
@@ -21,13 +20,19 @@ public class Player : MonoBehaviour
         }
     }
 
-
-    public GameObject bubbleObj;
-    public Button bubbleBtn;
+    public GameObject ButtonObj;
+    public Button ChestBtn;
+    public Button ChestCloseBtn;
+    public Button AlchemyBtn;
+    public Button ExplorBtn;
+    public Button ReadingBtn;
+    public Button PlantBtn;
 
     void Start()
     {
-        
+        ChestBtn.onClick.AddListener(ChestShow);
+        ChestCloseBtn.onClick.AddListener(ChestHide);
+        AlchemyBtn.onClick.AddListener(AlchemyShow);
     }
 
 
@@ -36,14 +41,14 @@ public class Player : MonoBehaviour
         //G 随机得到一个物品放到背包里面
         if (Input.GetKeyDown(KeyCode.G))
         {
-            //int id = Random.Range(1, 18);
-            Chest.Instance.StoreItem(1);
+            Chest.Instance.StoreItem(1001);
+            Chest.Instance.StoreItem(2001);
+            Chest.Instance.StoreItem(2002);
         }
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-            //int id = Random.Range(1, 18);
-            FormulaPanel.Instance.StoreItem(2);
+            FormulaPanel.Instance.StoreItem(3001);
         }
 
         //T 控制背包的显示和隐藏
@@ -52,6 +57,26 @@ public class Player : MonoBehaviour
             Chest.Instance.DisplaySwitch();
         }
 	}
+
+    void ChestShow()
+    {
+        Chest.Instance.Show();
+    }
+
+    void ChestHide() 
+    {
+        Chest.Instance.Hide();
+    }
+
+    void AlchemyShow()
+    {
+        Chest.Instance.Show();
+        Alchemy.Instance.Show();
+        FormulaPanel.Instance.Show();
+        InventoryManager.Instance.HideAllButton();
+    }
+
+
 
     /// <summary>
     /// 消费

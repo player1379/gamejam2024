@@ -27,8 +27,6 @@ public class BubblePool : MonoBehaviour
     private void Awake()
     {
         bubblePool = new ObjectPool<GameObject>(createBubble, actionOnGet, actionOnRelease, actionOnDestroy, true, 10, 100);
-
-        elementBubblePool = new ObjectPool<GameObject>(createFuncElementBubble, actionOnGet, actionOnRelease, actionOnDestroy,true,10,100);
     }
 
     private void Start()
@@ -36,7 +34,6 @@ public class BubblePool : MonoBehaviour
         spawnInterval = 0.5f;
         indexer = 0;
     }
-
 
     private void Update()
     {
@@ -58,13 +55,6 @@ public class BubblePool : MonoBehaviour
     {
         var obj = Instantiate(bubble,transform);
         obj.GetComponent<Bubble>().pool = bubblePool;
-        return obj;
-    }
-
-    GameObject createFuncElementBubble()
-    {
-        var obj = Instantiate(elementBubbles[Random.Range(0,4)], transform);
-        obj.GetComponent<ElementBubble>().pool = elementBubblePool;
         return obj;
     }
 
@@ -95,12 +85,6 @@ public class BubblePool : MonoBehaviour
     {
         GameObject temp = bubblePool.Get();
         temp.transform.position = pointTransforms[Random.Range(0, pointTransforms.Length)].position;
-    }
-
-    private void SpawnElement()
-    {
-        GameObject temp = elementBubblePool.Get();
-        temp.transform.localPosition = pointTransforms[Random.Range(0, pointTransforms.Length)].position;
     }
 }
 

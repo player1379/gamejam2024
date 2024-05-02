@@ -66,10 +66,26 @@ public class Slot : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,IPoi
     {
         if (transform.childCount > 0)
         {
-            string toolTipText = transform.GetChild(0).GetComponent<ItemUI>().Item.GetToolTipText();
-            InventoryManager.Instance.ShowToolTip(toolTipText);
-        }
-        
+            Item item = transform.GetChild(0).GetComponent<ItemUI>().Item;
+            //string toolTipText = transform.GetChild(0).GetComponent<ItemUI>().Item.GetToolTipText();
+            string toolTipText = item.GetToolTipText();
+            if (item.Type == Item.ItemType.Plant)
+            {
+                string element = (item as Plant).GetToolTipSprie()[0];
+                string effect = (item as Plant).GetToolTipSprie()[1];
+                InventoryManager.Instance.ShowToolTip(toolTipText,element,effect);
+            }
+            else if (item.Type == Item.ItemType.Material)
+            {
+                string element = (item as Material).GetToolTipSprie()[0];
+                string effect = (item as Material).GetToolTipSprie()[1];
+                InventoryManager.Instance.ShowToolTip(toolTipText, element, effect);
+            }
+            else
+            {
+                InventoryManager.Instance.ShowToolTip(toolTipText);
+            }
+        }        
     }
 
     public virtual void OnPointerDown(PointerEventData eventData)

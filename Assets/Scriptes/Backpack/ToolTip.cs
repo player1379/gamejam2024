@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Xml.Linq;
+using TMPro;
 
 public class ToolTip : MonoBehaviour 
 {
@@ -12,6 +14,10 @@ public class ToolTip : MonoBehaviour
     private float targetAlpha = 0 ;
 
     public float smoothing = 1;
+
+    public Sprite[] elements;
+    public Text effectTxt;
+    public GameObject[] gameObjects;
 
     void Start()
     {
@@ -41,10 +47,37 @@ public class ToolTip : MonoBehaviour
     public void Hide()
     {
         targetAlpha = 0;
+        foreach (GameObject obj in gameObjects)
+        {
+            Color c =new Color();
+            c.a = 0;
+            obj.GetComponent<Image>().color = c;
+        }
+
     }
     public void SetLocalPotion(Vector3 position)
     {
         transform.localPosition = position;
     }
-	
+
+    public void ShowElement(string element)
+    {
+        if (element != "")
+        {
+            Color w = Color.white;
+            for (int i = 0; i < element.Length; i++)
+            {
+                gameObjects[i].GetComponent<Image>().sprite = elements[(element[i] - 49)];
+                gameObjects[i].GetComponent<Image>().color = w;
+            }
+        }
+    }
+
+    public void ShowEffect(string effect)
+    {
+        if (effect != "")
+        {
+            effectTxt.text = effect;
+        }
+    }
 }
