@@ -21,10 +21,6 @@ public class PlantItem : MonoBehaviour
     }
 
     public void GetPlant() {
-        if(fm == null) {
-        Debug.Log("11");
-            return ;
-        }
         fm.SelectPlant(this);
     }
 }

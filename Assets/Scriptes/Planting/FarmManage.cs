@@ -12,14 +12,15 @@ public class FarmManage : MonoBehaviour
     void Start()
     {
         List<Item> items = InventoryManager.Instance.ItemList;
+        int i = 0;
         foreach (var item in items)
         {
             if(item.Type == 0) {
-            Debug.Log($"item + {item.Name}");
-             GameObject itemGameObject = Instantiate(plantItemPrefab, transform);
-            //  itemGameObject.GetComponent<ItemUI>().SetItem(item.Name);
-            // 建prefab change sprites
-            
+                GameObject itemGameObject = Instantiate(plantItemPrefab, transform);
+                itemGameObject.transform.localScale = Vector3.one;
+                itemGameObject.transform.localPosition = new Vector2(-766 + i * 212, -63);
+                itemGameObject.GetComponent<ItemUI>().SetItem(item);
+                i++;
             }
         }
     }
