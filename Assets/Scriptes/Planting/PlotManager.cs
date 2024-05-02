@@ -5,35 +5,34 @@ using UnityEngine;
 public class PlotManager : MonoBehaviour
 {
     bool isPlanted = false;
-    public SpriteRenderer plant;
+    SpriteRenderer plant;
+    // SpriteRenderer growPannel;
+    BoxCollider2D plantCollider;
+    // public Sprite plantStage;
     
-    public Sprite[] plantStages;
+    // public Sprite[] plantStages;
 
-    float timeBtwStages = 1f;
-    float timer;  
-    int plantIndex= 0;
-
+    // float timeBtwStages = 1f;
+    // float timer;  
+    // int plantIndex= 0;
+ 
     void Start()
     {
-
+        plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        plantCollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {
-        // if(isPlanted) {
-        //     timer -= Time.deltaTime;
-        //     if(timer < 0 && plantIndex < plantStages.Length -1) {
-        //         timer = timeBtwStages;
-        //         plantIndex ++;
-        //         UpdatePlant();
-                
-        //     }
-        // }
     }
 
     private void OnMouseDown() {
-        if(plantIndex == plantStages.Length -1 ) {
-            Harvest();
+        // Vector3 worldPosition = transform.position;
+        // Vector2 screenPosition = Main.camera.WorldToScreenPoint(worldPosition);
+
+        if(isPlanted) {
+            UpdatePannel();
+            // Harvest();
         }
         else {
             Plant();
@@ -42,17 +41,21 @@ public class PlotManager : MonoBehaviour
 
     void Harvest() {
         plant.gameObject.SetActive(false);
-        plantIndex = 0;
+        isPlanted = false;
     }
 
     void Plant() {
-        plantIndex ++;
+        isPlanted = true;
         UpdatePlant();
-        // timer = timeBtwStages;
         plant.gameObject.SetActive(true);
     }
 
+    void UpdatePannel() {
+        // growPannel.gameObject.SetActive(true);
+    }
     void UpdatePlant() {
-        plant.sprite = plantStages[plantIndex];
+        // plant.sprite = plantStages[plantIndex];
+        plantCollider.size = plant.sprite.bounds.size;
+        plantCollider.offset = new Vector2(0,plant.size.y/2);
     }
 }

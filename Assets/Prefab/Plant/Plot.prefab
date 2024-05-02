@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921583524215880132}
-  - component: {fileID: 4921583524215880135}
   - component: {fileID: 4921583524215880134}
+  - component: {fileID: 283341110490248526}
   - component: {fileID: 4921583524215880133}
+  - component: {fileID: 459842207683424030}
   m_Layer: 0
   m_Name: Plot
   m_TagString: Untagged
@@ -35,22 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4921583524215880135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4921583524215880131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeba59947d87c7e489dc6fd0de53d39d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plant: {fileID: 4921583524338663300}
-  plantStages:
-  - {fileID: 111967215, guid: 4d27f548c4cef438ca52fb2d69895260, type: 3}
-  - {fileID: 69354759, guid: 4d27f548c4cef438ca52fb2d69895260, type: 3}
 --- !u!212 &4921583524215880134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -103,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &283341110490248526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921583524215880131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeba59947d87c7e489dc6fd0de53d39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &4921583524215880133
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,6 +126,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0531015, y: 0.74000007}
   m_EdgeRadius: 0
+--- !u!50 &459842207683424030
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921583524215880131}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4921583524338663298
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4921583524338663299}
   - component: {fileID: 4921583524338663300}
-  - component: {fileID: 4921583524338663301}
+  - component: {fileID: 6421260536521319724}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -214,7 +232,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4921583524338663301
+--- !u!61 &6421260536521319724
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

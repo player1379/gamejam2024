@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 /// <summary>
-/// Ö²ÎïÀà
+/// Ö²ï¿½ï¿½ï¿½ï¿½
 /// <summary>
 public class Plant : Item
 {

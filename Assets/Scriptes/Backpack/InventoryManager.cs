@@ -30,6 +30,8 @@ public class InventoryManager : MonoBehaviour
     //物品信息的列表(集合)
     private List<Item> itemList;
 
+    public List<Item> ItemList => itemList;
+
     #region ToolTip
     private ToolTip toolTip;
 
@@ -133,7 +135,7 @@ public class InventoryManager : MonoBehaviour
                     string typeElement = temp["element"].StringValue;
                     string element = temp["element"].StringValue;
                     string sideEffect = temp["sideEffect"].StringValue;
-                    item = new Material(id,name, ItemType.Material,description,capacity,buyPrice,sellPrice,sprite,element,sideEffect);
+                    item = new Plant(id,name, ItemType.Plant,description,capacity,buyPrice,sellPrice,sprite,element,sideEffect);
                     break;
                 case ItemType.Medicament:
                     string effect = "";
