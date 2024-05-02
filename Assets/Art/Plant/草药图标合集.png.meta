@@ -1,0 +1,907 @@
+fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+guid: 8acab5e555ce4420fa1f9000912134ca
+========
+guid: b78b60622956c4626ba46feba09c0341
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_0
+========
+      name: plant_0
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 523
+        width: 443
+        height: 460
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: c02fe9e14ae9f5345b70bcff47697efe
+      internalID: 7758461
+========
+      spriteID: 7b6415a8d6cee443598bf9c20dc88b57
+      internalID: 111967215
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_1
+========
+      name: plant_1
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 523
+        width: 368
+        height: 501
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 12fb269d1ab5a7e419a23f2cc43ecb30
+      internalID: -907955739
+========
+      spriteID: f19bc03b1ec804beaa902539f40f4617
+      internalID: -144049105
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_2
+========
+      name: plant_2
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 526
+        width: 180
+        height: 454
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 4f6a5c08f7ab6f44a990236363d13af4
+      internalID: -1580801993
+========
+      spriteID: ff538cbd855ff4e8f986568ec03a6b69
+      internalID: -212402564
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_3
+========
+      name: plant_3
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 531
+        width: 460
+        height: 427
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: d6b06340808e7ad49a94f1bb9de3b7d2
+      internalID: -514027251
+========
+      spriteID: e6bd247c2b3144b12bafc5c74bab9bd4
+      internalID: 1710559130
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_4
+========
+      name: plant_4
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 526
+        width: 215
+        height: 447
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 259f871209e4a4b47b223dbda28e1dfa
+      internalID: -909887061
+========
+      spriteID: 4c9d70a9714894b548fa0df43574b4de
+      internalID: 714799476
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_5
+========
+      name: plant_5
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 532
+        width: 358
+        height: 457
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: fa96507815e71c4418ef968cc9e5143e
+      internalID: 1409327251
+========
+      spriteID: 184afd1fdf4a74507b0c2fdb5f615892
+      internalID: 1346993070
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_6
+========
+      name: plant_6
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 526
+        width: 347
+        height: 454
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 381e7ce728d211344bfc00da0311479d
+      internalID: -1148762143
+========
+      spriteID: e3c5ea86aef6949d9a62a1995fd4183f
+      internalID: -1337863932
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_7
+========
+      name: plant_7
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 3496
+        y: 521
+        width: 403
+        height: 467
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 5b08b5851c4ffa645870630a6d49aa20
+      internalID: 102513895
+========
+      spriteID: 631d0fe008eeb49579b9076078b90b67
+      internalID: 70381818
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_8
+========
+      name: plant_8
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 523
+        width: 438
+        height: 447
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: aa6ada9d89104684fa2c73a441b15153
+      internalID: 1673074733
+========
+      spriteID: 4373d3a69fcf0489194f7e1f3effd185
+      internalID: 891013227
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_9
+========
+      name: plant_9
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 4561
+        y: 521
+        width: 285
+        height: 472
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 1176d8651c9de5846af72ccbd637dc7d
+      internalID: 1451478959
+========
+      spriteID: f26117ef2ef8047b29f44609a2cc1fbd
+      internalID: 1068448057
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_10
+========
+      name: plant_10
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 36
+        width: 359
+        height: 442
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 37dfad41f6407534ca1d32e71632f709
+      internalID: 855603333
+========
+      spriteID: 7e3738fb108344951b9edd491a9f5c55
+      internalID: 2002929478
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_11
+========
+      name: plant_11
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 34
+        width: 380
+        height: 457
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 6f1a673106a53754bbb282eb6db5608d
+      internalID: 1238438991
+========
+      spriteID: bf676f5ad67184cd5b5961ddbda75b6e
+      internalID: -1395724728
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_12
+========
+      name: plant_12
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 36
+        width: 316
+        height: 417
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 9195f5c3d28e1344fa3352d44b5dc8bf
+      internalID: 95563023
+========
+      spriteID: 5771d40a8fab84be5bda038948b9af8a
+      internalID: -1501109436
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_13
+========
+      name: plant_13
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 49
+        width: 405
+        height: 401
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: abead6d2792134a43a2e740638fa55ff
+      internalID: -1168378599
+========
+      spriteID: c24ff9fa4b0c44d8f9b0b7c66c04a8ad
+      internalID: -1956817587
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_14
+========
+      name: plant_14
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 39
+        width: 340
+        height: 419
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 4fd9c9635e70e094287aa5d6f4c66648
+      internalID: 1774256268
+========
+      spriteID: f026a772d52194174affd066cd8649a3
+      internalID: 1404780134
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_15
+========
+      name: plant_15
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 2554
+        y: 36
+        width: 297
+        height: 412
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: b5a3eda69bdfa3c47ae11c5299b2afae
+      internalID: -739093716
+========
+      spriteID: 3dccb5f324b5d4aaca047d7bd6ac155e
+      internalID: 1113306580
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_16
+========
+      name: plant_16
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 34
+        width: 437
+        height: 437
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: d67266293ab799b4d9e09479cf742ec8
+      internalID: 324002383
+========
+      spriteID: 366115a122dfb4c5d9d8babfb49d0e6c
+      internalID: 69354759
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_17
+========
+      name: plant_17
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 36
+        width: 192
+        height: 445
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 0d879f942a4b8974280d8cc845fe6f08
+      internalID: -1609282500
+========
+      spriteID: 1634bf91ae4434e28bae6e9ba247c140
+      internalID: 1786378285
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_18
+========
+      name: plant_18
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 36
+        width: 343
+        height: 430
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 8a3262b43c8762045a7ca7f8e667f2b1
+      internalID: -1782828916
+========
+      spriteID: 884987e93949c4e09817aa2158fc3484
+      internalID: 1906403131
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_19
+========
+      name: plant_19
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 4496
+        y: 34
+        width: 323
+        height: 452
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 72f41c92452c99f45889074af2e1e5e0
+      internalID: 820616449
+========
+      spriteID: e98784872d0ff421c9fabd70e235b248
+      internalID: 2058841430
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      name: Plant_20
+========
+      name: "\u8349\u836F\u56FE\u6807\u5408\u96C6_20"
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 0
+        width: 45
+        height: 4
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+========
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      spriteID: 98b2fcd02b1eb3545a01f6b39bcb10ec
+      internalID: -44549473
+========
+      spriteID: 144476e5559cf4bc085cabd40fbf7835
+      internalID: 407700520
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+<<<<<<<< Updated upstream:Assets/Art/Plant/Plant.png.meta
+      Plant_8: 1673074733
+      Plant_3: -514027251
+      Plant_9: 1451478959
+      Plant_0: 7758461
+      Plant_20: -44549473
+      Plant_14: 1774256268
+      Plant_17: -1609282500
+      Plant_10: 855603333
+      Plant_5: 1409327251
+      Plant_15: -739093716
+      Plant_2: -1580801993
+      Plant_11: 1238438991
+      Plant_7: 102513895
+      Plant_16: 324002383
+      Plant_18: -1782828916
+      Plant_12: 95563023
+      Plant_6: -1148762143
+      Plant_1: -907955739
+      Plant_13: -1168378599
+      Plant_19: 820616449
+      Plant_4: -909887061
+========
+      plant_3: 1710559130
+      plant_16: 69354759
+      plant_14: 1404780134
+      plant_0: 111967215
+      plant_9: 1068448057
+      plant_10: 2002929478
+      plant_1: -144049105
+      plant_8: 891013227
+      plant_15: 1113306580
+      plant_6: -1337863932
+      plant_11: -1395724728
+      plant_5: 1346993070
+      plant_4: 714799476
+      plant_13: -1956817587
+      plant_19: 2058841430
+      plant_18: 1906403131
+      plant_17: 1786378285
+      plant_7: 70381818
+      plant_12: -1501109436
+      "\u8349\u836F\u56FE\u6807\u5408\u96C6_20": 407700520
+      plant_2: -212402564
+>>>>>>>> Stashed changes:Assets/Art/Plant/草药图标合集.png.meta
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
