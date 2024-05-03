@@ -20,23 +20,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public GameObject ButtonObj;
-    public Button ChestBtn;
-    public Button ChestCloseBtn;
-    public Button AlchemyBtn;
-    public Button GrindBtn;
-    public Button ExplorBtn;
-    public Button ReadingBtn;
-    public Button PlantBtn;
-
-    void Start()
-    {
-        ChestBtn.onClick.AddListener(ChestShow);
-        ChestCloseBtn.onClick.AddListener(ChestHide);
-        AlchemyBtn.onClick.AddListener(AlchemyShow);
-        GrindBtn.onClick.AddListener(InventoryManager.Instance.ShowGrindPanel);
-    }
-
 
 	void Update () 
     {
@@ -52,34 +35,9 @@ public class Player : MonoBehaviour
         {
             FormulaPanel.Instance.StoreItem(3001);
         }
-
-        //T 控制背包的显示和隐藏
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Chest.Instance.DisplaySwitch();
-        }
 	}
 
-    void ChestShow()
-    {
-        Chest.Instance.Show();
-    }
-
-    void ChestHide() 
-    {
-        Chest.Instance.Hide();
-    }
-
-    void AlchemyShow()
-    {
-        Chest.Instance.Show();
-        Alchemy.Instance.Show();
-        FormulaPanel.Instance.Show();
-        InventoryManager.Instance.HideAllButton();
-    }
-
-
-
+    
     /// <summary>
     /// 消费
     /// </summary>

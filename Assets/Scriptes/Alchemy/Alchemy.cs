@@ -26,8 +26,6 @@ public class Alchemy : Inventory
     public override void Start()
     {
         base.Start();
-        Hide();
-
         alchemyBtn.onClick.AddListener(OnAlchemyBtnDown);
     }
 
@@ -108,7 +106,7 @@ public class Alchemy : Inventory
         {
 
         }
-            return "";
+        return "";
     }
 
     //显示可以合成按钮
@@ -128,9 +126,9 @@ public class Alchemy : Inventory
         Chest.Instance.Hide();
         Alchemy.Instance.Hide();
         FormulaPanel.Instance.Hide();
-        InventoryManager.Instance.ShowBubblePanel();
+        Alchemy.Instance.HideAlchemyBtn();
+        GameManager.Instance.BubbleGameIsStart = true;
         Chest.Instance.StoreItem(InventoryManager.Instance.formulaesIndex);
     }
-
 }
 

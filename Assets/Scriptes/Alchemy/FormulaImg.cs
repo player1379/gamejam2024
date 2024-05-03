@@ -47,8 +47,6 @@ public class FormulaImg : MonoBehaviour
         }
     }
 
-
-
     //放入材料后更新显示
     public void UpdateAlchemy()
     {       

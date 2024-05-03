@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.UI;
 
 
 /// <summary>
-/// 
+/// 气泡玩法
 /// <summary>
 public class BubblePool : MonoBehaviour
 {
@@ -14,15 +15,13 @@ public class BubblePool : MonoBehaviour
     public GameObject[] elementBubbles;
 
     public Transform[] pointTransforms;
+    public Transform ParentTransform;
 
     public float spawnInterval;
     private float spawnTimer;
     public float spawnTimer2;
 
-    public int indexer;
-
     private ObjectPool<GameObject> bubblePool;
-    private ObjectPool<GameObject> elementBubblePool;
 
     private void Awake()
     {
@@ -32,25 +31,28 @@ public class BubblePool : MonoBehaviour
     private void Start()
     {
         spawnInterval = 0.5f;
-        indexer = 0;
     }
 
     private void Update()
     {
-        spawnTimer += Time.deltaTime;
-        spawnTimer2 += Time.deltaTime;
-        if (spawnTimer >= spawnInterval)
+        if (GameManager.Instance.BubbleGameIsStart)
         {
-            spawnTimer -= spawnInterval;
-            Spawn();
-        }
-        if (spawnTimer2 >= 10 * spawnInterval)
-        {
-            spawnTimer2 -= 10 * spawnInterval;
-            CreateElementBubble();
+            spawnTimer += Time.deltaTime;
+            spawnTimer2 += Time.deltaTime;
+            if (spawnTimer >= spawnInterval)
+            {
+                spawnTimer -= spawnInterval;
+                Spawn();
+            }
+            if (spawnTimer2 >= 10 * spawnInterval)
+            {
+                spawnTimer2 -= 10 * spawnInterval;
+                CreateElementBubble();
+            }          
         }
     }
 
+    #region 对象池
     GameObject createBubble()
     {
         var obj = Instantiate(bubble,transform);
@@ -73,18 +75,31 @@ public class BubblePool : MonoBehaviour
         Destroy(obj);
     }
 
+    #endregion
+
+    // 销毁所有气泡
+    public void ClearBubble()
+    {
+        int childCount = ParentTransform.childCount;
+        for (int i = 0; i < childCount; i++)
+        {
+            Transform child = ParentTransform.GetChild(i);
+            Destroy(child.gameObject);
+        }
+    }
 
     void CreateElementBubble()
     {
         var obj = Instantiate(elementBubbles[Random.Range(0, 4)], transform);
         obj.transform.position = pointTransforms[Random.Range(0, pointTransforms.Length)].position;
+        obj.transform.SetParent(ParentTransform);
     }
-
 
     private void Spawn()
     {
         GameObject temp = bubblePool.Get();
         temp.transform.position = pointTransforms[Random.Range(0, pointTransforms.Length)].position;
+        temp.transform.SetParent(ParentTransform);
     }
 }
 
