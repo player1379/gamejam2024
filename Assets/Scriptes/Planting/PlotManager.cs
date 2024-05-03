@@ -5,8 +5,11 @@ using UnityEngine;
 public class PlotManager : MonoBehaviour
 {
     bool isPlanted = false;
+    bool panelActive = false;
     public SpriteRenderer plant;
+    public GameObject panel;
     BoxCollider2D plantCollider;
+
     // public Sprite[] plantStages;
 
     // float timeBtwStages = 1f;
@@ -31,15 +34,21 @@ public class PlotManager : MonoBehaviour
                 
         //     }
         // }
-    }
+    }             
 
     private void OnMouseDown() {
-        if(isPlanted) {
-            Harvest();
-        }
-        else {
-            Plant();
-        }
+        // bool growSelected = GameObject.Find("GrowBtn").GetComponent<GrowClick>();
+        // if(growSelected) {
+            if(panelActive) {
+                panel.gameObject.SetActive(false);
+                panelActive = false;
+            }
+            else {
+                panel.gameObject.SetActive(true);
+                panelActive = true;
+            }
+        // }
+        
     }
 
     void Harvest() {

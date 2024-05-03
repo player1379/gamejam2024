@@ -11,7 +11,6 @@ public class PlantItem : MonoBehaviour
     void Start()
     {
         fm = FindObjectOfType<FarmManage>();
-
     }
 
     // Update is called once per frame
