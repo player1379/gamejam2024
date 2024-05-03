@@ -17,9 +17,9 @@ public class FarmManage : MonoBehaviour
         {
             if(item.Type == 0) {
                 GameObject itemGameObject = Instantiate(plantItemPrefab, transform);
-                itemGameObject.transform.localScale = Vector3.one;
-                itemGameObject.transform.localPosition = new Vector2(-766 + i * 212, -63);
-                itemGameObject.GetComponent<ItemUI>().SetItem(item);
+                // itemGameObject.transform.localScale = Vector3.one;
+                itemGameObject.transform.localPosition = new Vector2(-552 + i * 212, 0);
+                itemGameObject.transform.GetChild(0).GetComponent<ItemUI>().SetItem(item);
                 i++;
             }
         }
@@ -32,10 +32,10 @@ public class FarmManage : MonoBehaviour
     }
 
     public void SelectPlant(PlantItem newPlant) {
+        Debug.Log("111"+newPlant+selectPlant);
         if(selectPlant == newPlant) {
             selectPlant = null;
             isPlanting = false;
-            Debug.Log("111");
         
         } else {
             selectPlant = newPlant;
