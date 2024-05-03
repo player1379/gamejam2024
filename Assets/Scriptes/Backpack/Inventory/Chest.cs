@@ -23,6 +23,4 @@ public class Chest : Inventory
         base.Start();
         Hide();
     }
-
-
 }

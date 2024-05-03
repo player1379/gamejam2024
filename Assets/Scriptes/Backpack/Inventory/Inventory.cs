@@ -149,6 +149,7 @@ public class Inventory : MonoBehaviour
         }
         PlayerPrefs.SetString(this.gameObject.name, sb.ToString());
     }
+
     public void LoadInventory()
     {
         if (PlayerPrefs.HasKey(this.gameObject.name) == false) return;

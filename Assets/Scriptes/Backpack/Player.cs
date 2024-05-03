@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public Button ChestBtn;
     public Button ChestCloseBtn;
     public Button AlchemyBtn;
+    public Button GrindBtn;
     public Button ExplorBtn;
     public Button ReadingBtn;
     public Button PlantBtn;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
         ChestBtn.onClick.AddListener(ChestShow);
         ChestCloseBtn.onClick.AddListener(ChestHide);
         AlchemyBtn.onClick.AddListener(AlchemyShow);
+        GrindBtn.onClick.AddListener(InventoryManager.Instance.ShowGrindPanel);
     }
 
 
