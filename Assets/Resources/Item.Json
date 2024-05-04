@@ -21,6 +21,7 @@
     "sellPrice": 5,
     "element": "2",
     "sideEffect": "副作用1",
+    "canPlant": true,
     "sprite": "Sprites/Plant/001"
   },
   {
@@ -33,6 +34,7 @@
     "sellPrice": 5,
     "element": "22",
     "sideEffect": "副作用1",
+    "canPlant": false,
     "sprite": "Sprites/Plant/001"
   },
   {
@@ -45,6 +47,7 @@
     "sellPrice": 5,
     "element": "2",
     "sideEffect": "副作用2",
+    "canPlant": false,
     "sprite": "Sprites/Plant/001"
   },
   {
@@ -57,6 +60,7 @@
     "sellPrice": 5,
     "element": "2",
     "sideEffect": "副作用3",
+    "canPlant": false,
     "sprite": "Sprites/Plant/001"
   },
   {
@@ -69,6 +73,7 @@
     "sellPrice": 5,
     "element": "2",
     "sideEffect": "副作用4",
+    "canPlant": false,
     "sprite": "Sprites/Plant/001"
   },
   {

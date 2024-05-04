@@ -66,12 +66,19 @@ public class DialogManager : MonoBehaviour
     /// <summary>
     /// 角色立绘列表
     /// </summary>
-    public List<Sprite> sprites = new List<Sprite>();
+    public List<Sprite> NPCsprites = new List<Sprite>();
+
+    public List<Sprite> emotesprites = new List<Sprite>();
 
     /// <summary>
     /// 角色名字对应图片的字典
     /// </summary>
     Dictionary<string,Sprite> imageDic = new Dictionary<string,Sprite>();
+
+    /// <summary>
+    /// 角色表情对应图片
+    /// </summary>
+    Dictionary<string,Sprite> emoteDic = new Dictionary<string,Sprite>();
 
     /// <summary>
     /// 当前对话的索引值
@@ -83,28 +90,30 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     private string[] dialogRows;
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
 
     private void Awake()
     {
-        imageDic["主角"] = sprites[0];
-        imageDic["旁白"] = sprites[1];
-        imageDic["天使"] = sprites[2];
-        imageDic["游侠"] = sprites[3];
-        imageDic["骑士"] = sprites[4];
-        imageDic["村长"] = sprites[5];
-        imageDic["守卫"] = sprites[6];
-        imageDic["老爷爷"] = sprites[7];
+        imageDic["奶牛猫"] = NPCsprites[0];
+
+
+        emoteDic["无表情"] = emotesprites[0];
+        emoteDic["悲伤"] = emotesprites[1];
+        emoteDic["闭眼"] = emotesprites[2];
+        emoteDic["生气"] = emotesprites[3];
+        emoteDic["惊讶"] = emotesprites[4];
+        emoteDic["开心"] = emotesprites[5];
+        emoteDic["圈圈眼"] = emotesprites[6];
+        emoteDic["黑线生气"] = emotesprites[7];
     }
 
     private void Start()
     {
-        audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
-        //audioSource.volume = GameFacade.Instance.SoundValue;
-
-        spriteLeft.GetComponent<CanvasGroup>().alpha = 0;
+        spriteLeft.GetComponent<CanvasGroup>().alpha = 1;
         spriteRight.GetComponent<CanvasGroup>().alpha = 0;
         ReadText(dialogDataFile);
+        nextBtn.onClick.AddListener(OnClickNext);
+
         //dialogIndex = GameFacade.Instance.StoryIndex;
         ShowDialogRow();
     }
@@ -116,7 +125,14 @@ public class DialogManager : MonoBehaviour
     /// <param name="dialog"></param>
     public void UpdateText(string name, string dialog)
     {
-        nameText.text = name; 
+        if (name !="")
+        {
+            nameText.text = name;
+        }
+        else
+        {
+            nameText.text = "小女巫";
+        }        
         dialogText.text = dialog;
     }
 
@@ -125,19 +141,17 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     /// <param name="name"></param>
     /// <param name="atLeft"></param>
-    public void UpdateImage(string name,string positin)
+    public void UpdateImage(string emote, string name)
     {
-        if (positin == "左")
-        {
-            spriteLeft.sprite = imageDic[name];
-            spriteLeft.GetComponent<CanvasGroup>().alpha = 1;
-            spriteRight.GetComponent<CanvasGroup>().alpha = 0;
-        }
-        else if (positin == "右") 
+        spriteLeft.sprite = emoteDic[emote];
+        if (name != "") 
         {
             spriteRight.sprite = imageDic[name];
             spriteRight.GetComponent<CanvasGroup>().alpha = 1;
-            spriteLeft.GetComponent<CanvasGroup>().alpha = 0;
+        }
+        else
+        {
+            spriteRight.GetComponent<CanvasGroup>().alpha = 0;
         }
     }
 
@@ -160,7 +174,7 @@ public class DialogManager : MonoBehaviour
             string[] cells = dialogRows[i].Split(',');
             if (cells[0] == "#" &&int.Parse(cells[1]) == dialogIndex)
             {
-                UpdateText(cells[2], cells[4]);
+                UpdateText(cells[3], cells[4]);
                 UpdateImage(cells[2], cells[3]);
 
                 dialogIndex = int.Parse(cells[5]);

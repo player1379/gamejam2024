@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
         //G 随机得到一个物品放到背包里面
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Chest.Instance.StoreItem(1001);
             Chest.Instance.StoreItem(2001);
             Chest.Instance.StoreItem(2002);
         }
@@ -43,8 +42,13 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Chest.Instance.LoadInventory();
+            Chest.Instance.SaveInventory();
             BackpackPanel.Instance.LoadChest();
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Chest.Instance.DisplaySwitch();
         }
     }
 

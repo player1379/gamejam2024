@@ -123,11 +123,15 @@ public class InventoryManager : MonoBehaviour
             switch (itemType)
             {             
                 case ItemType.Material:
-                case ItemType.Plant:
-                    string typeElement = temp["element"].StringValue;
                     string element = temp["element"].StringValue;
                     string sideEffect = temp["sideEffect"].StringValue;
-                    item = new Material(id,name, ItemType.Material,description,capacity,buyPrice,sellPrice,sprite,element,sideEffect);
+                    item = new Material(id, name, ItemType.Material, description, capacity, buyPrice, sellPrice, sprite, element, sideEffect);
+                    break;
+                case ItemType.Plant:
+                    element = temp["element"].StringValue;
+                    sideEffect = temp["sideEffect"].StringValue;
+                    bool canPlant = temp["canPlant"].BoolValue;
+                    item = new Plant(id,name, ItemType.Plant,description,capacity,buyPrice,sellPrice,sprite,element,sideEffect,canPlant);
                     break;
                 case ItemType.Medicament:
                     string effect = "";

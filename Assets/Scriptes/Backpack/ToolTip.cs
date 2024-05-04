@@ -44,6 +44,7 @@ public class ToolTip : MonoBehaviour
         contentText.text = text;
         targetAlpha = 1;
     }
+
     public void Hide()
     {
         targetAlpha = 0;
@@ -53,7 +54,6 @@ public class ToolTip : MonoBehaviour
             c.a = 0;
             obj.GetComponent<Image>().color = c;
         }
-
     }
     public void SetLocalPotion(Vector3 position)
     {

@@ -61,6 +61,8 @@ public class UIManager : MonoBehaviour
         //GrindBtn
         GrindSwithBtn.onClick.AddListener(GrindPanelSwith);
         GrindCloseBtn.onClick.AddListener(GrindPanelHide);
+
+        PlantBtn.onClick.AddListener(PlantPanelShow);
     }
 
     public void HideBtnUI()
@@ -116,6 +118,21 @@ public class UIManager : MonoBehaviour
         Chest.Instance.Show();
         BubblePanelObj.SetActive(true);
         GrindPanelObj.SetActive(false);
+    }
+
+    public void PlantPanelShow()
+    {
+        HideBtnUI();
+        Chest.Instance.SaveInventory();
+        PlantPanelObj.SetActive(true);
+        Chest.Instance.Hide();
+        StartCoroutine(LoadChest());
+    }
+
+    IEnumerator LoadChest()
+    {  
+        yield return new WaitForSeconds(0.1f);
+        BackpackPanel.Instance.LoadChest();
     }
 
     void ExploreShow()

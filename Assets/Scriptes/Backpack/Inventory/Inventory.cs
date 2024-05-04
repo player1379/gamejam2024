@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Text;
+using Unity.VisualScripting;
 
 public class Inventory : MonoBehaviour 
 {
@@ -175,9 +176,10 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
-    //加载仓库数据
+    //加载仓库数据到种植界面
     public void LoadChest()
     {
+        int index = 0;
         if (PlayerPrefs.HasKey("ChestPanel") == false) return;
         string str = PlayerPrefs.GetString("ChestPanel");
         //print(str);
@@ -192,10 +194,18 @@ public class Inventory : MonoBehaviour
                 int id = int.Parse(temp[0]);
                 Item item = InventoryManager.Instance.GetItemById(id);
                 int amount = int.Parse(temp[1]);
-                for (int j = 0; j < amount; j++)
+                if (item.Type == Item.ItemType.Plant)
                 {
-                    slotList[i].StoreItem(item);
-                }
+                    Plant plant = (Plant)item;
+                    if (plant.CanPlant)
+                    {
+                        for (int j = 0; j < amount; j++)
+                        {
+                            slotList[index].StoreItem(item);
+                        }
+                        index++;
+                    }
+                }               
             }
         }
     }
