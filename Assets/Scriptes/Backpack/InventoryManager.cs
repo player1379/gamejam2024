@@ -247,6 +247,5 @@ public class InventoryManager : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().CoinAmount = PlayerPrefs.GetInt("CoinAmount");
         }
-    }
-
+    }   
 }

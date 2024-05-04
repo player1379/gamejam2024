@@ -152,8 +152,8 @@ public class Inventory : MonoBehaviour
 
     public void LoadInventory()
     {
-        if (PlayerPrefs.HasKey(this.gameObject.name) == false) return;
-        string str = PlayerPrefs.GetString(this.gameObject.name);
+        if (PlayerPrefs.HasKey(gameObject.name) == false) return;
+        string str = PlayerPrefs.GetString(gameObject.name);
         //print(str);
         string[] itemArray = str.Split('-');
         for (int i = 0; i < itemArray.Length-1; i++)
@@ -174,4 +174,29 @@ public class Inventory : MonoBehaviour
         }
     }
     #endregion
+
+    //加载仓库数据
+    public void LoadChest()
+    {
+        if (PlayerPrefs.HasKey("ChestPanel") == false) return;
+        string str = PlayerPrefs.GetString("ChestPanel");
+        //print(str);
+        string[] itemArray = str.Split('-');
+        for (int i = 0; i < itemArray.Length - 1; i++)
+        {
+            string itemStr = itemArray[i];
+            if (itemStr != "0")
+            {
+                //print(itemStr);
+                string[] temp = itemStr.Split(',');
+                int id = int.Parse(temp[0]);
+                Item item = InventoryManager.Instance.GetItemById(id);
+                int amount = int.Parse(temp[1]);
+                for (int j = 0; j < amount; j++)
+                {
+                    slotList[i].StoreItem(item);
+                }
+            }
+        }
+    }
 }
