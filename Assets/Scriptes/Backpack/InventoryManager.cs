@@ -44,12 +44,6 @@ public class InventoryManager : MonoBehaviour
     public GameObject formula;
     private FormulaImg formulaImg;
 
-    //所有按钮
-    public GameObject ButtonObj;
-
-    public GameObject BubblePanel;
-    public GameObject GrindPanel;
-
     private Canvas canvas;
 
     #region PickedItem
@@ -211,38 +205,7 @@ public class InventoryManager : MonoBehaviour
             formulaImg.UpdateAlchemy();
         }       
     }
-
-    //控制所有按钮显隐
-    public void ShowAllButton()
-    {
-        ButtonObj.gameObject.SetActive(true);
-    }
-
-    //控制玩法面板
-    public void HideAllButton()
-    {
-        ButtonObj.gameObject.SetActive(false);
-    }
-
-    public void ShowBubblePanel()
-    {
-        BubblePanel.gameObject.SetActive(true);
-    }
-
-    public void HideBubblePanel()
-    {
-        BubblePanel.gameObject.SetActive(false);
-    }
-
-    public void ShowGrindPanel()
-    {
-        GrindPanel.gameObject.SetActive(true);
-    }
-
-    public void HideGrindPanel() 
-    {
-        GrindPanel.gameObject.SetActive(false);
-    }
+  
 
     //捡起物品槽指定数量的物品
     public void PickupItem(Item item,int amount)

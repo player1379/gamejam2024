@@ -25,8 +25,8 @@ public class BubbleAmount : MonoBehaviour
         if (MaxIndex < index)
         {
             //小游戏结束  显示炼金产物  关闭窗口
-            InventoryManager.Instance.HideBubblePanel();
-            InventoryManager.Instance.ShowAllButton();
+            UIManager.Instance.AlchemyHide();
+            UIManager.Instance.ShowBtnUI();
         }
     }
 

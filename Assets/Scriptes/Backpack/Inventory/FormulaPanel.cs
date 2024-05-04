@@ -22,11 +22,5 @@ public class FormulaPanel : Inventory
         }
     }
     #endregion
-
-    public override void Start()
-    {
-        base.Start();
-        Hide();
-    }
 }
 

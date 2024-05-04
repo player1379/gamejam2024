@@ -22,8 +22,6 @@ public class GrindPanel : MonoBehaviour
     private void Start()
     {
         Timer = 0;
-        Chest.Instance.Show();
-        Grind.Instance.Show();
         grindStartBtn.onClick.AddListener(CreateGrind);
     }
 
@@ -32,7 +30,7 @@ public class GrindPanel : MonoBehaviour
         Timer += Time.deltaTime;
         if (Timer > Times)
         {
-            InventoryManager.Instance.HideGrindPanel();
+            UIManager.Instance.GrindPanelHide();
         }
     }
 

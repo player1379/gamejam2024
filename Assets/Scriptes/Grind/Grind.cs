@@ -22,11 +22,5 @@ public class Grind : Inventory
         }
     }
     #endregion
-
-    public override void Start()
-    {
-        base.Start();
-        Show();
-    }
 }
 
