@@ -35,7 +35,18 @@ public class Player : MonoBehaviour
         {
             FormulaPanel.Instance.StoreItem(3001);
         }
-	}
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Chest.Instance.SaveInventory();
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Chest.Instance.LoadInventory();
+            BackpackPanel.Instance.LoadChest();
+        }
+    }
 
     
     /// <summary>

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &624193385301924608
+--- !u!1 &3179025214155539760
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 624193385301924615}
-  - component: {fileID: 624193385301924613}
-  - component: {fileID: 624193385301924614}
-  - component: {fileID: 624193385301924612}
-  - component: {fileID: -7925385793012019465}
+  - component: {fileID: 3179025214155539767}
+  - component: {fileID: 3179025214155539765}
+  - component: {fileID: 3179025214155539766}
+  - component: {fileID: 3179025214155539764}
+  - component: {fileID: 1260271992250015506}
   m_Layer: 5
-  m_Name: Slot
+  m_Name: PlantSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &624193385301924615
+--- !u!224 &3179025214155539767
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624193385301924608}
+  m_GameObject: {fileID: 3179025214155539760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,35 +40,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &624193385301924613
+--- !u!222 &3179025214155539765
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624193385301924608}
+  m_GameObject: {fileID: 3179025214155539760}
   m_CullTransparentMesh: 1
---- !u!114 &624193385301924614
+--- !u!114 &3179025214155539766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624193385301924608}
+  m_GameObject: {fileID: 3179025214155539760}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1070600590, guid: b38f793613a9ab34ba711a201ea423c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ce9dedcdf4094347bd86e188057504e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -78,13 +78,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &624193385301924612
+--- !u!114 &3179025214155539764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624193385301924608}
+  m_GameObject: {fileID: 3179025214155539760}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -118,20 +118,20 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 624193385301924614}
+  m_TargetGraphic: {fileID: 3179025214155539766}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-7925385793012019465
+--- !u!114 &1260271992250015506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624193385301924608}
+  m_GameObject: {fileID: 3179025214155539760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a6609de14e66984ba0e202643045368, type: 3}
+  m_Script: {fileID: 11500000, guid: 3cffe199cf0b282418bf2c224ca39b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 7615272980832110443, guid: 3c27e3f8ce6302c448cd52a9ad4bf314, type: 3}
+  itemPrefab: {fileID: 3210691555088707807, guid: c8314ae747f6b8847b33142a6bd33774, type: 3}
