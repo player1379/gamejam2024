@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c02dbddcbc4159641b3bcc9c1a306d39
+guid: 4e7c208de5e804cf2a8fee22a03b0584
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,29 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u5C0F\u5C4B\u95E8_0"
+      name: status
       rect:
         serializedVersion: 2
-        x: 0
-        y: 79
-        width: 755
-        height: 1177
+        x: 8
+        y: 173
+        width: 405
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +119,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe8ee7bee77ee2f49844d32b97cd1e1b
-      internalID: 1131234569
+      spriteID: 57fee167c50684688a54ea1acf3b6453
+      internalID: 687717777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftg
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 123
+        width: 178
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c4c8b6d6373428ea31ba8326008a53
+      internalID: 1023688839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mp
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 91
+        width: 177
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4a45a5a78cc45d5be6de83fed85b36
+      internalID: -973713117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1CEB6957A3F980BAB91AF416ED738C72_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 9
+        width: 183
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1c9115d61de49a39a565bf3fadc602
+      internalID: 80931908
       vertices: []
       indices: 
       edges: []
@@ -148,8 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u5C0F\u5C4B\u95E8_1": -913820318
-      "\u5C0F\u5C4B\u95E8_0": 1131234569
+      1CEB6957A3F980BAB91AF416ED738C72_3: 80931908
+      status: 687717777
+      ftg: 1023688839
+      mp: -973713117
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
