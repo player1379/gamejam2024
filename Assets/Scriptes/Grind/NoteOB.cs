@@ -18,6 +18,9 @@ public class NoteOB : MonoBehaviour
 
     public KeyCode keyTopress;
 
+    public GameObject PergectObj;
+    public GameObject MissObj;
+
     private void Start()
     {
         flySpeed = 2.0f;
@@ -26,7 +29,7 @@ public class NoteOB : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y + flySpeed * Time.deltaTime);
+        transform.position = new Vector3(transform.position.x, transform.position.y - flySpeed * Time.deltaTime);
 
         if (Input.GetKeyDown(keyTopress))
         {
@@ -34,7 +37,8 @@ public class NoteOB : MonoBehaviour
             {
                 pool.Release(gameObject);
                 canBePress = false;
-                GrindManager.instance.NoteHit();
+                var obj =  Instantiate(PergectObj);
+                obj.transform.position = gameObject.transform.position;
             }
         }
         if (canBeRelease)
@@ -61,7 +65,8 @@ public class NoteOB : MonoBehaviour
         if (collision.tag == "Activator" && gameObject.activeSelf)
         {
             canBePress = false;
-            GrindManager.instance.NoteMiss();
+            var obj = Instantiate(MissObj);
+            obj.transform.position = gameObject.transform.position;
         }
     }
 }

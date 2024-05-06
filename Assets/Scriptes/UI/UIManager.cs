@@ -85,6 +85,7 @@ public class UIManager : MonoBehaviour
         FormulaPanel.Instance.Show();
         BubblePanelObj.SetActive(true);
         HideBtnUI();
+        AudioManager.Instance.PlayAlchemyBGM();
     }
 
     public void AlchemyHide()
@@ -93,11 +94,13 @@ public class UIManager : MonoBehaviour
         FormulaPanel.Instance.Hide();
         BubblePanelObj.SetActive(false);
         ShowBtnUI();
+        AudioManager.Instance.PlayHouseBGM();
     }
 
     void AlchemySwith()
     {
         Chest.Instance.Show();
+        FormulaPanel.Instance.Hide();
         GrindPanelObj.SetActive(true);
         BubblePanelObj.SetActive(false);
     }
@@ -117,6 +120,7 @@ public class UIManager : MonoBehaviour
     public void GrindPanelSwith()
     {
         Chest.Instance.Show();
+        FormulaPanel.Instance.Show();
         BubblePanelObj.SetActive(true);
         GrindPanelObj.SetActive(false);
     }
@@ -136,7 +140,7 @@ public class UIManager : MonoBehaviour
         BackpackPanel.Instance.LoadChest();
     }
 
-    public void PlantPanelHide() 
+    public void PlantPanelHide()
     {
         ShowBtnUI();
         PlantPanelObj.SetActive(false);

@@ -64,8 +64,8 @@ public class GorwthTip : MonoBehaviour
         if (plant.CanPlant)
         {
             itemUI.SetItem(InventoryManager.Instance.GetItemById(id));
-            Hide();
         }
+        Hide();
     }
 
     public void OnButton2ClickDown()
@@ -75,9 +75,9 @@ public class GorwthTip : MonoBehaviour
         id += Random.Range(2,4);
         if (plant.CanPlant)
         {
-            itemUI.SetItem(InventoryManager.Instance.GetItemById(id));
-            Hide();
+            itemUI.SetItem(InventoryManager.Instance.GetItemById(id));           
         }
+        Hide();
     }
 }
 

@@ -73,8 +73,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        toolTip = GameObject.FindObjectOfType<ToolTip>();
-        //formula = GameObject.Find("Formula").gameObject;
+        toolTip = FindObjectOfType<ToolTip>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         pickedItem = GameObject.Find("PickedItem").GetComponent<ItemUI>();
         pickedItem.Hide();
@@ -87,14 +86,12 @@ public class InventoryManager : MonoBehaviour
             //物品跟随鼠标
             Vector2 position;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, null, out position);
-            position = new Vector2(position.x / 2.4f, position.y / 2.4f);
             pickedItem.SetLocalPosition(position);
         }else if (isToolTipShow)
         {
             //控制提示面板跟随鼠标
             Vector2 position;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(canvas.transform as RectTransform, Input.mousePosition, null, out position);
-            position = new Vector2(position.x / 2.4f, position.y / 2.4f);
             toolTip.SetLocalPotion(position+toolTipPosionOffset);
         }
     }

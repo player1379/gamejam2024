@@ -51,6 +51,16 @@ public class Player : MonoBehaviour
         {
             Chest.Instance.DisplaySwitch();
         }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            GrindManager.instance.GrindStart();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GrindManager.instance.GrindOver();
+        }
     }
 
     

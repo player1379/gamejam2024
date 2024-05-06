@@ -74,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1608040281, guid: 1fab7dde3a2137e45a9e9073017c3856, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 8712cd33d446e8648948bd6a3438f08a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePress: 0
+  canBeRelease: 0
+  flySpeed: 0
   keyTopress: 0
+  PergectObj: {fileID: 7786590169605196386, guid: 636530169dec6af49bd7e66525df306e, type: 3}
+  MissObj: {fileID: 5334743162224310918, guid: 9ced9d24a93f6fd45a106ec511e1266e, type: 3}
 --- !u!58 &3923021101612090426
 CircleCollider2D:
   m_ObjectHideFlags: 0

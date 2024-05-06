@@ -28,10 +28,11 @@ public class PlantSlot : Slot
                 Plant plant = currentItem.Item as Plant;
                 if (!plant.CanPlant)
                 {
-                    Debug.Log("这个植物可以收获");
                     Debug.Log(currentItem.Item.ID);
                     Chest.Instance.StoreItem(currentItem.Item.ID);
                     DestroyImmediate(currentItem.gameObject);
+
+                    //隐藏提示面板
                 }
                 else
                 {
@@ -48,7 +49,6 @@ public class PlantSlot : Slot
             ItemUI currentItem = transform.GetChild(0).GetComponent<ItemUI>();
             if (InventoryManager.Instance.IsPickedItem ==false) //手上没东西
             {
-                Debug.Log(currentItem.Item.ID);
                 gorwthTip.Show(currentItem.Item.Name);
 
                 gorwthTip.itemUI = currentItem;
@@ -79,11 +79,6 @@ public class PlantSlot : Slot
                 return; //手上没东西
             }
         }
-    }
-
-    //改变地块下的植物属性
-    public void ChangeItemData()
-    {
     }
 }
 

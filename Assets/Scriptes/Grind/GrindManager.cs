@@ -22,18 +22,23 @@ public class GrindManager : MonoBehaviour
     public void GrindStart()
     {
         BS.hasStart = true;
+        AudioManager.Instance.Pause();
         myMusic.Play();
+        StartCoroutine(GrindOverIE());
     }
 
-    public void NoteHit()
+    IEnumerator GrindOverIE()
     {
-        Debug.Log("Hit");
+        yield return new WaitForSeconds(20);
+        GrindOver();
     }
 
-    public void NoteMiss()
+    public void GrindOver()
     {
-        Debug.Log("MISSSSSSSS");
+        BS.hasStart = false;
+        myMusic.Pause();
+        Grind.Instance.Show();
+        Chest.Instance.Show();
     }
-
 }
 

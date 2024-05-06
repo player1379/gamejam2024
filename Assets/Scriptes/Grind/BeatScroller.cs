@@ -35,11 +35,11 @@ public class BeatScroller : MonoBehaviour
 
     private void Update()
     {     
-        if (GameManager.Instance.GrindGameIsStart) 
+        if (hasStart) 
         {
             spawnTimer += Time.deltaTime;
         }
-        if (spawnTimer >= spawnInterval && GameManager.Instance.GrindGameIsStart)
+        if (spawnTimer >= spawnInterval && hasStart)
         {
             spawnTimer -= spawnInterval;
             index = Random.Range(0, 4);
