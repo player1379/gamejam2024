@@ -46,7 +46,6 @@ public class UIManager : MonoBehaviour
     public GameObject BubblePanelObj;
     public GameObject GrindPanelObj;
     public GameObject PlantPanelObj;
-    public GameObject StoryPanelObj;
     public GameObject ExplorePanelObj;
 
     void Start()
@@ -63,7 +62,12 @@ public class UIManager : MonoBehaviour
         GrindCloseBtn.onClick.AddListener(GrindPanelHide);
 
         PlantBtn.onClick.AddListener(PlantPanelShow);
+        PlantCloseBtn.onClick.AddListener(PlantPanelHide);
+
+        ExplorBtn.onClick.AddListener(ExplorePanelShow);
+        ExplorCloseBtn.onClick.AddListener(ExplorePanelHide);
     }
+
 
     public void HideBtnUI()
     {
@@ -78,19 +82,16 @@ public class UIManager : MonoBehaviour
     public void AlchemyShow()
     {
         Chest.Instance.Show();
-        BubblePanelObj.SetActive(true);
-        Alchemy.Instance.Show();
         FormulaPanel.Instance.Show();
+        BubblePanelObj.SetActive(true);
         HideBtnUI();
     }
 
     public void AlchemyHide()
     {
-        Debug.Log(2);
         Chest.Instance.Hide();
-        BubblePanelObj.SetActive(false);
-        Alchemy.Instance.Hide();
         FormulaPanel.Instance.Hide();
+        BubblePanelObj.SetActive(false);
         ShowBtnUI();
     }
 
@@ -130,16 +131,27 @@ public class UIManager : MonoBehaviour
     }
 
     IEnumerator LoadChest()
-    {  
+    {
         yield return new WaitForSeconds(0.1f);
         BackpackPanel.Instance.LoadChest();
     }
 
-    void ExploreShow()
+    public void PlantPanelHide() 
     {
-
+        ShowBtnUI();
+        PlantPanelObj.SetActive(false);
     }
 
+    public void ExplorePanelShow()
+    {
+        HideBtnUI();
+        ExplorePanelObj.SetActive(true);
+    }
 
+    public void ExplorePanelHide()
+    { 
+        ShowBtnUI();
+        ExplorePanelObj.SetActive(false);
+    }
 }
 

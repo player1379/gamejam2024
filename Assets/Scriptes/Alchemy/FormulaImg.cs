@@ -12,7 +12,6 @@ using UnityEngine.UI;
 public class FormulaImg : MonoBehaviour
 {
     public GameObject[] Elements;
-    public Sprite[] elements;
 
     public Button closeBtn;
 
@@ -21,60 +20,52 @@ public class FormulaImg : MonoBehaviour
     public int[] ElementInt = new int[] { 0, 0, 0, 0, 0 };
 
     //配方需要的元素
-    public int[] ElementFormul;
+    public int[] ElementFormul; //{2,2,0,0,0}
     //配方里需要的元素所创建的所有预制件
     public List<GameObject> elementsGameObjects;
 
-    private void Start()
+    private void Update()
     {
         UpdateFormulaImg();
+        UpdateAlchemy();
     }
 
     //更新配方中的元素
     public void UpdateFormulaImg()
-    {    
+    {
         ElementFormul = ConvertToNumberArray(InventoryManager.Instance.formulaesStr);
+        Color c = Color.black;
+        c.a = 0;
+        Color c2 = Color.black;
         for (int i = 0; i < Elements.Length; i++)
         {
-            prefabWithImage.GetComponent<Image>().sprite = elements[i];
-            prefabWithImage.GetComponent<Image>().color = Color.black;
-            for (int j = 0; j < ElementFormul[i]; j++)
+            for (int j = 0; j < Elements[i].transform.childCount; j++)
             {
-                GameObject childObject = Instantiate(prefabWithImage);
-                elementsGameObjects.Add(childObject);
-                childObject.transform.SetParent(Elements[i].transform);
+                Elements[i].transform.GetChild(j).GetComponent<Image>().color = c;
+            }
+            for (int k = 0; k < ElementFormul[i]; k++)
+            {
+                Elements[i].transform.GetChild(k).GetComponent<Image>().color = c2;
             }
         }
     }
 
     //放入材料后更新显示
     public void UpdateAlchemy()
-    {       
-        foreach (var item in elementsGameObjects)
+    {
+        Color c = Color.white;
+        ElementInt = InventoryManager.Instance.alchemyInt;
+        for (int i = 0; i < ElementInt.Length; i++)
         {
-            item.GetComponent<Image>().color = Color.black;
-        }
-        if (InventoryManager.Instance.alchemyInt.Length != 0)
-        {
-            ElementInt = InventoryManager.Instance.alchemyInt;
-        }
-        for (int i = 0; i < 5; i++)
-        {
-            if (ElementInt[i] > ElementFormul[i])
+            for (int k = 0; k < ElementInt[i]; k++)
             {
-                ElementInt[i] = ElementFormul[i];
+                Elements[i].transform.GetChild(k).GetComponent<Image>().color = c;
             }
-            for (int j = 0; j < ElementInt[i]; j++)
-            {
-                if (Elements[i].transform.GetChild(j) != null)
-                {
-                    Elements[i].transform.GetChild(j).GetComponent<Image>().color = Color.white;
-                }
-            }           
         }
-        foreach (var item in elementsGameObjects)
+        
+        for (int i = 0; i < ElementInt.Length; i++)
         {
-            if (item.GetComponent<Image>().color != Color.white)
+            if (ElementInt[i] < ElementFormul[i])
             {
                 Alchemy.Instance.HideAlchemyBtn();
                 return;
@@ -82,7 +73,6 @@ public class FormulaImg : MonoBehaviour
         }
         Alchemy.Instance.ShowAlchemyBtn();
     }
-
 
 
     //字符串->数组

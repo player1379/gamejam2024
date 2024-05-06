@@ -32,6 +32,7 @@ public class Slot : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,IPoi
     }
 
 
+
     /// <summary>
     /// 得到当前物品槽存储的物品类型
     /// </summary>
@@ -208,12 +209,11 @@ public class Slot : MonoBehaviour ,IPointerEnterHandler,IPointerExitHandler,IPoi
                     currentItem.SetItem(InventoryManager.Instance.PickedItem.Item, InventoryManager.Instance.PickedItem.Amount);
                     InventoryManager.Instance.PickedItem.SetItem(item, amount);
                 }
-
             }
         }
         else
         {
-            // 自身是空  
+            //自身是空  
                         //1,IsPickedItem ==true  pickedItem放在这个位置
                             // 按下ctrl      放置当前鼠标上的物品的一个
                             // 没有按下ctrl   放置当前鼠标上的物品所有数量

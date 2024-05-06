@@ -26,10 +26,13 @@ public class Alchemy : Inventory
     public override void Start()
     {
         base.Start();
+        Show();
         alchemyBtn.onClick.AddListener(OnAlchemyBtnDown);
+        alchemyBtn.gameObject.SetActive(false);
     }
 
     public Button alchemyBtn;
+    public Slider alchemySlider;
 
     //数组对应数量  金 木 水 火 土
     public int[] elementCount;
@@ -70,9 +73,18 @@ public class Alchemy : Inventory
         {
             if (slot.transform.childCount > 0)
             {
-                Material item = (Material)slot.transform.GetChild(0).GetComponent<ItemUI>().Item;
-                element += item.Element;
-                //Debug.Log(element);
+                Item item = slot.transform.GetChild(0).GetComponent<ItemUI>().Item;
+                switch (item.Type)
+                {
+                    case Item.ItemType.Plant:
+                        Plant plant = (Plant)item;
+                        element += plant.Element;
+                        break;
+                    case Item.ItemType.Material:
+                        Material material = (Material)item;
+                        element += material.Element;
+                        break;
+                }
             }
         }
         if (element != "")
@@ -120,15 +132,31 @@ public class Alchemy : Inventory
         alchemyBtn.gameObject.SetActive(false);
     }
 
+    //按下合成按钮
     public void OnAlchemyBtnDown()
     {
-        //显示气泡玩法界面  输出成品
+        //显示气泡玩法界面  输出成品  销毁合成栏的道具
         Chest.Instance.Hide();
         Alchemy.Instance.Hide();
         FormulaPanel.Instance.Hide();
+        ClearItem();
         Alchemy.Instance.HideAlchemyBtn();
+        alchemySlider.gameObject.SetActive(true);
         GameManager.Instance.BubbleGameIsStart = true;
         Chest.Instance.StoreItem(InventoryManager.Instance.formulaesIndex);
+    }
+
+    //清空合成台
+    public void ClearItem()
+    {
+        foreach (Slot slot in slotList)
+        {
+            if (slot.transform.childCount > 0)
+            {
+                Destroy(slot.transform.GetChild(0).gameObject);
+                InventoryManager.Instance.alchemyInt = new int[] { 0, 0, 0, 0, 0 };
+            }
+        }
     }
 }
 

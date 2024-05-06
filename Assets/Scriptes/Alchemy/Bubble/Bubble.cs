@@ -11,7 +11,7 @@ using UnityEngine.Pool;
 public class Bubble : MonoBehaviour
 {
     public ObjectPool<GameObject> pool;
-    public BubbleAmount amount;
+    public BubblePool amount;
 
     public Animator animator;
 
@@ -20,7 +20,7 @@ public class Bubble : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        amount = GetComponentInParent<BubbleAmount>();
+        amount = GetComponentInParent<BubblePool>();
         animator.SetBool("play", false);
     }
 

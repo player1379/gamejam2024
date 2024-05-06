@@ -21,6 +21,11 @@ public class BubblePool : MonoBehaviour
     private float spawnTimer;
     public float spawnTimer2;
 
+    int index;
+    int MaxIndex = 20;//可改成由配方决定数量
+
+    public Slider Slider;
+
     private ObjectPool<GameObject> bubblePool;
 
     private void Awake()
@@ -31,6 +36,7 @@ public class BubblePool : MonoBehaviour
     private void Start()
     {
         spawnInterval = 0.5f;
+        Slider.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -49,6 +55,19 @@ public class BubblePool : MonoBehaviour
                 spawnTimer2 -= 10 * spawnInterval;
                 CreateElementBubble();
             }          
+        }
+
+        Slider.value = (float)index / MaxIndex;
+        if (MaxIndex < index)
+        {
+            //小游戏结束  显示炼金产物
+            index = 0;
+            GameManager.Instance.BubbleGameIsStart = false;
+            CreateElementBubble();
+            Chest.Instance.Show();
+            Alchemy.Instance.Show();
+            FormulaPanel.Instance.Show();
+            Slider.gameObject.SetActive(false);
         }
     }
 
@@ -100,6 +119,11 @@ public class BubblePool : MonoBehaviour
         GameObject temp = bubblePool.Get();
         temp.transform.position = pointTransforms[Random.Range(0, pointTransforms.Length)].position;
         temp.transform.SetParent(ParentTransform);
+    }
+
+    public void BubbleCount()
+    {
+        index++;
     }
 }
 

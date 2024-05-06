@@ -34,20 +34,12 @@ public class BeatScroller : MonoBehaviour
     }
 
     private void Update()
-    {
-        if (!startPlaying)
-        {
-            if (Input.anyKeyDown)
-            {
-                startPlaying = true;               
-            }
-        }
-       
-        if (startPlaying) 
+    {     
+        if (GameManager.Instance.GrindGameIsStart) 
         {
             spawnTimer += Time.deltaTime;
         }
-        if (spawnTimer >= spawnInterval && startPlaying)
+        if (spawnTimer >= spawnInterval && GameManager.Instance.GrindGameIsStart)
         {
             spawnTimer -= spawnInterval;
             index = Random.Range(0, 4);

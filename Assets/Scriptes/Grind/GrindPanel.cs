@@ -9,11 +9,6 @@ using UnityEngine.UI;
 /// <summary>
 public class GrindPanel : MonoBehaviour
 {
-    public GameObject sliderObj;
-    public GameObject triggerObj;
-
-    public Transform triggerTrans;
-
     public Button grindStartBtn;
 
     public float Timer;
@@ -30,6 +25,8 @@ public class GrindPanel : MonoBehaviour
         Timer += Time.deltaTime;
         if (Timer > Times)
         {
+            Timer = 0;
+            Grind.Instance.Show();
             UIManager.Instance.GrindPanelHide();
         }
     }
@@ -39,11 +36,7 @@ public class GrindPanel : MonoBehaviour
         Chest.Instance.Hide();
         Grind.Instance.Hide();
         GrindManager.instance.GrindStart();
-        GameObject sObj = Instantiate(sliderObj);
-        sObj.transform.SetParent(triggerTrans);
-        GameObject tObj = Instantiate(triggerObj);
-        tObj.transform.SetParent(triggerTrans);
-        tObj.transform.localPosition = new Vector3(Random.Range(-4, 6), 0, 0);
+        GameManager.Instance.GrindGameIsStart =true;
     }
 }
 

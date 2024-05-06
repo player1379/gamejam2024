@@ -57,6 +57,16 @@ public class GameManager
     }
 
     /// <summary>
+    /// 是否开始剧情
+    /// </summary>
+    private bool mStoryIsStart;
+    public bool StoryIsStart
+    {
+        set { mStoryIsStart = value; }
+        get { return mStoryIsStart; }
+    }
+
+    /// <summary>
     /// 气泡玩法是否重新开始
     /// </summary>
     private bool mBubbleGameIsStart;
@@ -64,6 +74,16 @@ public class GameManager
     {
         set { mBubbleGameIsStart = value; }
         get { return mBubbleGameIsStart; }
+    }
+
+    /// <summary>
+    /// 跳舞玩法是否重新开始
+    /// </summary>
+    private bool mGrindGameIsStart;
+    public bool GrindGameIsStart
+    {
+        set { mGrindGameIsStart = value; }
+        get { return mGrindGameIsStart; }
     }
 }
 

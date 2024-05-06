@@ -16,7 +16,7 @@ public class DialogManager : MonoBehaviour
             {
                 //静态方式不能调用普通方法 GetComponent去查找
                 //只能用Find 通过名字找到
-                instance = GameObject.Find("DialogManager").GetComponent<DialogManager>();
+                instance = GameObject.Find("StoryPanel").GetComponent<DialogManager>();
             }
             return instance;
         }
@@ -86,6 +86,11 @@ public class DialogManager : MonoBehaviour
     public int dialogIndex;
 
     /// <summary>
+    /// 剧情显隐
+    /// </summary>
+    public CanvasGroup canvasGroup;
+
+    /// <summary>
     /// 对话文本，按行分割
     /// </summary>
     private string[] dialogRows;
@@ -95,6 +100,13 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         imageDic["奶牛猫"] = NPCsprites[0];
+        imageDic["艾略特"] = NPCsprites[1];
+        imageDic["人类女性"] = NPCsprites[2];
+        imageDic["人类男性"] = NPCsprites[3];
+        imageDic["雇佣兵"] = NPCsprites[4];
+        imageDic["约翰"] = NPCsprites[5];
+        imageDic["哥布林呱嗒"] = NPCsprites[6];
+        //imageDic[""] = NPCsprites[6];
 
 
         emoteDic["无表情"] = emotesprites[0];
@@ -114,8 +126,9 @@ public class DialogManager : MonoBehaviour
         ReadText(dialogDataFile);
         nextBtn.onClick.AddListener(OnClickNext);
 
-        //dialogIndex = GameFacade.Instance.StoryIndex;
-        ShowDialogRow();
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 
     /// <summary>
@@ -168,7 +181,7 @@ public class DialogManager : MonoBehaviour
     /// 显示角色和文本
     /// </summary>
     public void ShowDialogRow()
-    {
+    {        
         for (int i = 0; i < dialogRows.Length; i++)
         {
             string[] cells = dialogRows[i].Split(',');
@@ -188,12 +201,10 @@ public class DialogManager : MonoBehaviour
             }
             else if (cells[0] == "END" && int.Parse(cells[1]) == dialogIndex)
             {
-                //#是支线故事
-                if (cells[2] == "#")
-                {
-                    //GameFacade.Instance.IncidentCount++;
-                }
-                //GameFacade.Instance.IsStoryOver = true;
+                //对话结束
+                canvasGroup.alpha = 0;
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
             }
         }
     }
