@@ -43,6 +43,9 @@ public class UIManager : MonoBehaviour
     public Button PlantBtn;
     public Button PlantCloseBtn;
 
+    public Button SettingBtn;
+    public Button NextDayBtn;
+
     public GameObject BubblePanelObj;
     public GameObject GrindPanelObj;
     public GameObject PlantPanelObj;
@@ -66,6 +69,8 @@ public class UIManager : MonoBehaviour
 
         ExplorBtn.onClick.AddListener(ExplorePanelShow);
         ExplorCloseBtn.onClick.AddListener(ExplorePanelHide);
+
+        NextDayBtn.onClick.AddListener(NextDayBtnDown);
     }
 
 
@@ -103,11 +108,6 @@ public class UIManager : MonoBehaviour
         FormulaPanel.Instance.Hide();
         GrindPanelObj.SetActive(true);
         BubblePanelObj.SetActive(false);
-    }
-
-    void GrindPanelShow()
-    {
-        
     }
 
     public void GrindPanelHide() 
@@ -149,13 +149,54 @@ public class UIManager : MonoBehaviour
     public void ExplorePanelShow()
     {
         HideBtnUI();
+        AudioManager.Instance.PlayExploreBGM();
         ExplorePanelObj.SetActive(true);
     }
 
     public void ExplorePanelHide()
     { 
         ShowBtnUI();
+        AudioManager.Instance.PlayHouseBGM();
         ExplorePanelObj.SetActive(false);
+    }
+
+
+    public void SettingBtnDown()
+    {
+
+    }
+
+
+    public void NextDayBtnDown()
+    {
+        GameManager.Instance.Day++;
+        if (GameManager.Instance.Day == 2)
+        {
+            DialogManager.Instance.dialogIndex = 30;
+            DialogManager.Instance.ShowDialogRow();
+            AudioManager.Instance.PlayMainStoryBGM();
+            DialogManager.Instance.canvasGroup.alpha = 1;
+            DialogManager.Instance.canvasGroup.interactable = true;
+            DialogManager.Instance.canvasGroup.blocksRaycasts = true;
+        }
+        else if (GameManager.Instance.Day == 3)
+        {
+            DialogManager.Instance.dialogIndex = 60;
+            DialogManager.Instance.ShowDialogRow();
+            AudioManager.Instance.PlayMainStoryBGM();
+            DialogManager.Instance.canvasGroup.alpha = 1;
+            DialogManager.Instance.canvasGroup.interactable = true;
+            DialogManager.Instance.canvasGroup.blocksRaycasts = true;
+        }
+        else if (GameManager.Instance.Day == 4)
+        {
+            DialogManager.Instance.dialogIndex = 80;
+            DialogManager.Instance.ShowDialogRow();
+            AudioManager.Instance.PlayMainStoryBGM();
+            DialogManager.Instance.canvasGroup.alpha = 1;
+            DialogManager.Instance.canvasGroup.interactable = true;
+            DialogManager.Instance.canvasGroup.blocksRaycasts = true;
+        }
     }
 }
 

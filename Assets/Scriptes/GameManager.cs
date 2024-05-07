@@ -15,7 +15,6 @@ public class GameManager
         get { return instance; }
     }
 
-
     /// <summary>
 	/// 天数
 	/// </summary>
@@ -47,23 +46,13 @@ public class GameManager
     }
 
     /// <summary>
-	/// 剧情索引值
-	/// </summary>
-    private int mStoryIndex;
-    public int StoryIndex
-    {
-        set { mStoryIndex = value; }
-        get { return mStoryIndex; }
-    }
-
-    /// <summary>
-    /// 是否开始剧情
+    /// 体力值
     /// </summary>
-    private bool mStoryIsStart;
-    public bool StoryIsStart
+    private int mFTG;
+    public int FTG
     {
-        set { mStoryIsStart = value; }
-        get { return mStoryIsStart; }
+        set { mFTG = value; }
+        get { return mFTG; }
     }
 
     /// <summary>
@@ -76,14 +65,6 @@ public class GameManager
         get { return mBubbleGameIsStart; }
     }
 
-    /// <summary>
-    /// 跳舞玩法是否重新开始
-    /// </summary>
-    private bool mGrindGameIsStart;
-    public bool GrindGameIsStart
-    {
-        set { mGrindGameIsStart = value; }
-        get { return mGrindGameIsStart; }
-    }
+
 }
 

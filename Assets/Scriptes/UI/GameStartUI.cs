@@ -15,17 +15,25 @@ public class GameStartUI : MonoBehaviour
     public Button overBtn;
     public Button settingBtn;
 
+    public Button TeamBtn;
+    public Button TeamCloseBtn;
+
     public VideoPlayer PV;
 
     public CanvasGroup canvas;
 
     private AudioSource audioSource;
 
+    public GameObject MakingTeamPanel;
+
     private void Start()
     {
         startBtn.onClick.AddListener(OnClickStartBtn);
         settingBtn.onClick.AddListener(OnClickSettingBtn);
         overBtn.onClick.AddListener(OnClickOverBtn);
+
+        TeamBtn.onClick.AddListener(OnClickTeamBtn);
+        TeamCloseBtn.onClick.AddListener(OnClickTeamCloseBtn);
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -48,6 +56,16 @@ public class GameStartUI : MonoBehaviour
     void OnClickSettingBtn()
     {
 
+    }
+
+    void OnClickTeamBtn()
+    {
+        MakingTeamPanel.SetActive(true);
+    }
+
+    void OnClickTeamCloseBtn() 
+    {
+        MakingTeamPanel.SetActive(false);
     }
 
     void OnClickOverBtn()

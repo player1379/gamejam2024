@@ -71,6 +71,13 @@ public class DialogManager : MonoBehaviour
     public List<Sprite> emotesprites = new List<Sprite>();
 
     /// <summary>
+    /// 背景立绘切换
+    /// </summary>
+    public List<Sprite> bgSprites = new List<Sprite>();
+
+    public GameObject Bg;
+
+    /// <summary>
     /// 角色名字对应图片的字典
     /// </summary>
     Dictionary<string,Sprite> imageDic = new Dictionary<string,Sprite>();
@@ -89,6 +96,8 @@ public class DialogManager : MonoBehaviour
     /// 剧情显隐
     /// </summary>
     public CanvasGroup canvasGroup;
+
+    public GameObject BG2;
 
     /// <summary>
     /// 对话文本，按行分割
@@ -126,9 +135,10 @@ public class DialogManager : MonoBehaviour
         ReadText(dialogDataFile);
         nextBtn.onClick.AddListener(OnClickNext);
 
-        canvasGroup.alpha = 0;
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+        dialogIndex = 101;
     }
 
     /// <summary>
@@ -169,6 +179,15 @@ public class DialogManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 更新背景图片
+    /// </summary>
+    /// <param name="index"></param>
+    public void UpdateBg(int index)
+    { 
+        Bg.GetComponent<Image>().sprite = bgSprites[index];
+    }
+
+    /// <summary>
     /// 解析文件
     /// </summary>
     /// <param name="textAsset"></param>
@@ -184,12 +203,23 @@ public class DialogManager : MonoBehaviour
     {        
         for (int i = 0; i < dialogRows.Length; i++)
         {
+            if (dialogIndex < 100)
+            {
+                BG2.gameObject.SetActive(true);
+            }
+            else
+            {
+                BG2.gameObject.SetActive(false);
+            }
             string[] cells = dialogRows[i].Split(',');
             if (cells[0] == "#" &&int.Parse(cells[1]) == dialogIndex)
             {
                 UpdateText(cells[3], cells[4]);
                 UpdateImage(cells[2], cells[3]);
-
+                if (cells[7] != "")
+                {
+                    UpdateBg(int.Parse(cells[7]));
+                }
                 dialogIndex = int.Parse(cells[5]);
                 nextBtn.gameObject.SetActive(true);
                 break;
@@ -205,6 +235,7 @@ public class DialogManager : MonoBehaviour
                 canvasGroup.alpha = 0;
                 canvasGroup.interactable = false;
                 canvasGroup.blocksRaycasts = false;
+                AudioManager.Instance.Pause();
             }
         }
     }

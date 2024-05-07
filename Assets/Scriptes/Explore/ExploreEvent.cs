@@ -41,6 +41,7 @@ public class ExploreEvent : MonoBehaviour
                 FormulaPanel.Instance.StoreItem(formulaID);
                 DialogManager.Instance.dialogIndex = storyIndex[0];
                 DialogManager.Instance.ShowDialogRow();
+                AudioManager.Instance.PlayStoryBGM();
                 DialogManager.Instance.canvasGroup.alpha = 1;
                 DialogManager.Instance.canvasGroup.interactable = true;
                 DialogManager.Instance.canvasGroup.blocksRaycasts = true;
@@ -48,6 +49,7 @@ public class ExploreEvent : MonoBehaviour
             case 5:
                 DialogManager.Instance.dialogIndex = storyIndex[1];
                 DialogManager.Instance.ShowDialogRow();
+                AudioManager.Instance.PlayStoryBGM();
                 DialogManager.Instance.canvasGroup.alpha = 1;
                 DialogManager.Instance.canvasGroup.interactable = true;
                 DialogManager.Instance.canvasGroup.blocksRaycasts = true;
@@ -55,6 +57,7 @@ public class ExploreEvent : MonoBehaviour
             case 10:
                 DialogManager.Instance.dialogIndex = storyIndex[2];
                 DialogManager.Instance.ShowDialogRow();
+                AudioManager.Instance.PlayStoryBGM();
                 DialogManager.Instance.canvasGroup.alpha = 1;
                 DialogManager.Instance.canvasGroup.interactable = true;
                 DialogManager.Instance.canvasGroup.blocksRaycasts = true;

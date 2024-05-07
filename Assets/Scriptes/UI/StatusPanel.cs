@@ -6,28 +6,19 @@ using UnityEngine.UI;
 
 public class StatusPanel : MonoBehaviour
 {
-    private TextMeshProUGUI moneyText;
-    private TextMeshProUGUI dayText;
-    private TextMeshProUGUI MoneyText
-    {
-        get
-        {
-            if (moneyText == null)
-            {
-                moneyText = GetComponentInChildren<TextMeshProUGUI>();
-            }
-            return moneyText;
-        }
-    }
-    // Start is called before the first frame update
+    public Text moneyText;
+    public Text dayText;
+    public Slider FTG;
+    public Slider MP;
+
     void Start()
     {
-        MoneyText.text = "1111";
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        dayText.text = GameManager.Instance.Day.ToString();
     }
 }
