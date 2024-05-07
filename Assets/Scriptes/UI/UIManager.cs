@@ -44,12 +44,17 @@ public class UIManager : MonoBehaviour
     public Button PlantCloseBtn;
 
     public Button SettingBtn;
+    public Button SettingCloseBtn;
+    public Button GameOverBtn;
+
     public Button NextDayBtn;
 
     public GameObject BubblePanelObj;
     public GameObject GrindPanelObj;
     public GameObject PlantPanelObj;
     public GameObject ExplorePanelObj;
+
+    public GameObject SettingObj;
 
     void Start()
     {
@@ -71,6 +76,10 @@ public class UIManager : MonoBehaviour
         ExplorCloseBtn.onClick.AddListener(ExplorePanelHide);
 
         NextDayBtn.onClick.AddListener(NextDayBtnDown);
+
+        SettingBtn.onClick.AddListener(SettingBtnDown);
+        SettingCloseBtn.onClick.AddListener(SetCloseBtn);
+        GameOverBtn.onClick.AddListener(GameOver);
     }
 
 
@@ -81,7 +90,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowBtnUI()
     {
-        UIObj.SetActive(true);
+        UIObj.SetActive(true);       
     }
 
     public void AlchemyShow()
@@ -163,13 +172,27 @@ public class UIManager : MonoBehaviour
 
     public void SettingBtnDown()
     {
+        SettingObj.gameObject.SetActive(true);
+    }
 
+    public void SetCloseBtn()
+    {
+        SettingObj.gameObject.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.Quit();
     }
 
 
     public void NextDayBtnDown()
     {
         GameManager.Instance.Day++;
+        GameManager.Instance.FTG = 10;
         if (GameManager.Instance.Day == 2)
         {
             DialogManager.Instance.dialogIndex = 30;

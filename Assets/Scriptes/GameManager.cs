@@ -26,9 +26,9 @@ public class GameManager
     }
 
     /// <summary>
-	/// 声望等级
+	/// 结局等级
 	/// </summary>
-	private int mWordLv = 1;
+	private int mWordLv;
     public int WordLv
     {
         set { mWordLv = value; }
@@ -48,7 +48,7 @@ public class GameManager
     /// <summary>
     /// 体力值
     /// </summary>
-    private int mFTG;
+    private int mFTG =10;
     public int FTG
     {
         set { mFTG = value; }

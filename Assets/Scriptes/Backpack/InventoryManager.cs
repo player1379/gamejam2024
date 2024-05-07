@@ -161,7 +161,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ShowToolTip(string content,string element="",string effect = "")
     {
-        if (this.isPickedItem) return;
+        if (isPickedItem) return;
         isToolTipShow = true;
         toolTip.Show(content);
         toolTip.ShowElement(element);

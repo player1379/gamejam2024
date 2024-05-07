@@ -115,8 +115,9 @@ public class DialogManager : MonoBehaviour
         imageDic["¹ÍÓ¶±ø"] = NPCsprites[4];
         imageDic["Ô¼º²"] = NPCsprites[5];
         imageDic["¸ç²¼ÁÖßÉàª"] = NPCsprites[6];
-        //imageDic[""] = NPCsprites[6];
-
+        imageDic["÷ÈÄ§"] = NPCsprites[7];
+        imageDic["÷ÈÄ§2"] = NPCsprites[8];
+        imageDic["¾«Áé"] = NPCsprites[9];
 
         emoteDic["ÎÞ±íÇé"] = emotesprites[0];
         emoteDic["±¯ÉË"] = emotesprites[1];
@@ -138,7 +139,7 @@ public class DialogManager : MonoBehaviour
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-        dialogIndex = 101;
+        dialogIndex = 200;
     }
 
     /// <summary>
@@ -260,21 +261,21 @@ public class DialogManager : MonoBehaviour
             GameObject button = Instantiate(optionBtn, buttonGroup);
             button.GetComponentInChildren<Text>().text = cells[4];
             button.GetComponent<Button>().onClick.AddListener
-                (
-                    delegate 
-                    { 
-                        OnOptionClick(int.Parse(cells[5]));
-                        if (cells[6] != "")
-                        {
-                            string[] effect = cells[6].Split('@');
-                            OptionEffect(effect[0], int.Parse(effect[1]));
-                        }
-                        if (cells[7] != "")
-                        {
-                            //GameFacade.Instance.MainStoryIndex = int.Parse(cells[7]);
-                        }
+            (
+                delegate 
+                { 
+                    OnOptionClick(int.Parse(cells[5]));
+                    if (cells[7] != "")
+                    {
+                        string[] effect = cells[7].Split('@');
+                        OptionEffect(effect[0], int.Parse(effect[1]));
                     }
-                );
+                    //if (cells[7] != "")
+                    //{
+                    //    //GameFacade.Instance.MainStoryIndex = int.Parse(cells[7]);
+                    //}
+                }
+            );
             GenerateOption(index + 1);
         }
     }
@@ -300,24 +301,18 @@ public class DialogManager : MonoBehaviour
     /// <param name="target"></param>
     public void OptionEffect(string effect,int parm)
     {
-        //switch (effect)
-        //{
-        //    case "food":
-        //        GameFacade.Instance.Food += parm;
-        //        break;
-        //    case "money":
-        //        GameFacade.Instance.Money += parm;
-        //        break;
-        //    case "worldLv":
-        //        GameFacade.Instance.WordLv += parm;
-        //        break;
-        //    case "hero" :
-        //        (GameFacade.Instance.Characters[parm] as Hero).IsUnlock = true;
-        //        break;
-        //    case "event":
-        //        GameFacade.Instance.FightIndex = parm;
-        //        GameFacade.Instance.IsFightIncident = true;
-        //        break;
-        //}
+        switch (effect)
+        {
+            case "end":
+                GameManager.Instance.WordLv += parm;
+                break;
+            case "CG":
+                if (GameManager.Instance.WordLv == 2)
+                {
+                    dialogIndex = 110;
+                    ShowDialogRow();
+                }
+                break;
+        }
     }
 }

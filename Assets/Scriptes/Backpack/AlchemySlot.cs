@@ -39,7 +39,5 @@ public class AlchemySlot : Slot
             }
         }
     }
-
-
 }
 

@@ -31,7 +31,14 @@ public class ExploreEvent : MonoBehaviour
 
     public void OnClickButtonDown()
     {
-        Debug.Log(gameObject.name);
+        if (GameManager.Instance.FTG > 0)
+        {
+            GameManager.Instance.FTG--;
+        }
+        else
+        {
+            return;
+        }
         storyCount++;
         int id = Random.Range(0, idLists.Count);
         Chest.Instance.StoreItem(idLists[id]);

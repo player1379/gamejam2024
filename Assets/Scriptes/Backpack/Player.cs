@@ -28,38 +28,16 @@ public class Player : MonoBehaviour
         {
             Chest.Instance.StoreItem(1001);
             Chest.Instance.StoreItem(2001);
+            Chest.Instance.StoreItem(2011); 
+            Chest.Instance.StoreItem(2042);
+            Chest.Instance.StoreItem(2042); 
+            Chest.Instance.StoreItem(2051);
         }
 
         if (Input.GetKeyDown(KeyCode.H))
         {
             FormulaPanel.Instance.StoreItem(3001);
             FormulaPanel.Instance.StoreItem(3002);
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Chest.Instance.SaveInventory();
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Chest.Instance.SaveInventory();
-            BackpackPanel.Instance.LoadChest();
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Chest.Instance.DisplaySwitch();
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            GrindManager.instance.GrindStart();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            GrindManager.instance.GrindOver();
         }
     }
 

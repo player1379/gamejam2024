@@ -357,7 +357,7 @@ TextureImporter:
         height: 194
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 8, y: 8, z: 8, w: 7}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -715,7 +715,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "ui\u7EC4\u4EF6_18": -555741483
+      "ui\u7EC4\u4EF6_21": 1920429485
       "ui\u7EC4\u4EF6_2": -1052369779
       "ui\u7EC4\u4EF6_3": -146184201
       "ui\u7EC4\u4EF6_4": -889981760
@@ -740,9 +740,9 @@ TextureImporter:
       "ui\u7EC4\u4EF6_22": 1312701062
       "ui\u7EC4\u4EF6_19": -203395229
       "ui\u7EC4\u4EF6_20": 1053746475
-      "ui\u7EC4\u4EF6_21": 1920429485
       "ui\u7EC4\u4EF6_24": -1328310102
       "ui\u7EC4\u4EF6_6": 1937586367
+      "ui\u7EC4\u4EF6_18": -555741483
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
